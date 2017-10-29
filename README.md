@@ -20,6 +20,16 @@ AppBarLayout是在LinearLayou上加了一些材料设计的概念，它可以让
 （如跟着一起滚动、保持不动等等）。那某个可移动的View到底是哪个可移动的View呢？这是由你自己指定的！
 如何指定，我们后面说。
 
+CoordinatorLayout作为“super-powered FrameLayout”基本实现两个功能：
+1、作为顶层布局
+2、调度协调子布局
+http://blog.csdn.net/xyz_lmn/article/details/48055919
 
+android官方侧滑菜单DrawerLayout详解
+http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2014/0925/1713.html
 
+为了使得Toolbar有滑动效果，必须做到如下三点:
+1. CoordinatorLayout作为布局的父布局容器。
+2. 给需要滑动的组件设置 app:layout_scrollFlags=”scroll|enterAlways” 属性。
+3. 给滑动的组件设置app:layout_behavior属性
 

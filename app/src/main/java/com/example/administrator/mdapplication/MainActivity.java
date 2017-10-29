@@ -8,6 +8,9 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.example.administrator.mdapplication.adapter.DataListAdapter;
+import com.example.administrator.mdapplication.snackbar.SnackbarActivity;
+import com.example.administrator.mdapplication.tablayout.TabLayoutBottomActivity;
+import com.example.administrator.mdapplication.tablayout.TabLayoutTopActivity;
 import com.example.administrator.mdapplication.toolbar.ToolBarActivity;
 
 import java.util.ArrayList;
@@ -56,7 +59,45 @@ public class MainActivity extends AppCompatActivity {
                     case 0:
                         ToolBarActivity.startActivity(MainActivity.this);
                         break;
+                    case 1:
+                        TabLayoutTopActivity.startActivity(MainActivity.this);
+                        break;
+                    case 2:
+                        TabLayoutBottomActivity.startActivity(MainActivity.this);
+                        break;
+                    case 3:
+                        SnackbarActivity.startActivity(MainActivity.this);
+                        break;
+                    case 4:
+                        FloatActionBarActivity.startActivity(MainActivity.this);
+                        break;
+                    case 5:
+                        AppBarLayoutActivity.startActivity(MainActivity.this);
+                        break;
 
+                    case 6:
+                        BehaviorDependentActivity.startActivity(MainActivity.this);
+                        break;
+
+                    case 7:
+                        BehaviorNestedActivity.startActivity(MainActivity.this);
+                        break;
+
+                    case 8:
+                        BehaviorNestedExpandActivity.startActivity(MainActivity.this);
+                        break;
+
+                    case 9:
+                        SearchResultActivity.startActivity(MainActivity.this);
+                        break;
+
+                    case 10:
+                        TextInputActivity.startActivity(MainActivity.this);
+                        break;
+
+                    case 11:
+                        BottomNavigationActivity.startActivity(MainActivity.this);
+                        break;
 
                 }
             }
@@ -64,7 +105,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private List getData() {
+
         list.add("toolBar");
+        list.add("tabLayoutTop");
+        list.add("tabLayoutBottom");
+        list.add("snackbar");
+        list.add("floatActionBar");
+        list.add("appBarLayout");
+        list.add("behaviorDependent");
+        list.add("behaviorNested");
+        list.add("behaviorNestedExpand");
+        list.add("searchResult");
+        list.add("textInput");
+        list.add("BottomNavigation");
+
         return list;
 
     }

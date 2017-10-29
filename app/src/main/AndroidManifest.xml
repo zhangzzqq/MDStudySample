@@ -19,6 +19,21 @@
 
         <activity android:name=".toolbar.SearchActivity"/>
         <activity android:name=".toolbar.ToolBarActivity"/>
+        <activity android:name=".tablayout.TabLayoutTopActivity"/>
+        <activity android:name=".tablayout.TabLayoutBottomActivity"/>
+        <activity android:name=".snackbar.SnackbarActivity"/>
+        <activity android:name=".PaletteDetailActivity" />
+        <activity android:name=".FloatActionBarActivity" />
+        <activity android:name=".AppBarLayoutActivity" />
+        <activity android:name=".BehaviorDependentActivity" />
+        <activity android:name=".BehaviorNestedActivity" />
+        <activity android:name=".BehaviorNestedExpandActivity" />
+        <activity android:name=".SearchResultActivity" />
+        <activity android:name=".TextInputActivity" />
+        <activity android:name=".BottomNavigationActivity" />
+
+
+
     </application>
 
 </manifest>
