@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    android:orientation="vertical">
+
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="22dp"
+        style="@style/spinnerTheme"
+       >
+
+    </Spinner>
+
+    <Spinner
+        android:id="@+id/Spinner01"
+        style="@style/spinnerTheme"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown" />
+
+
+    <Spinner
+        android:id="@+id/Spinner02"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:entries="@array/spinnername"
+        android:spinnerMode="dialog" />
+
+
+
+    <Spinner
+        android:id="@+id/Spinner03"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+         />
+
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white"
+        android:entries="@array/spinnername"
+        android:overlapAnchor="false"
+        android:paddingLeft="10dp"
+        android:popupBackground="#ffffff"
+        android:scrollbars="none"
+        android:spinnerMode="dropdown" />
+
+
+</LinearLayout>

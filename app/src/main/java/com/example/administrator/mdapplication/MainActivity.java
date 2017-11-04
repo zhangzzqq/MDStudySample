@@ -99,6 +99,10 @@ public class MainActivity extends AppCompatActivity {
                         BottomNavigationActivity.startActivity(MainActivity.this);
                         break;
 
+                    case 12:
+                        SpinnerStudy.startActivity(MainActivity.this);
+                        break;
+
                 }
             }
         });
@@ -118,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
         list.add("searchResult");
         list.add("textInput");
         list.add("BottomNavigation");
+        list.add("spinner");
 
         return list;
 

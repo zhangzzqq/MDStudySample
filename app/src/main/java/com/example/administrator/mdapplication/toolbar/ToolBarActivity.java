@@ -1,8 +1,12 @@
 package com.example.administrator.mdapplication.toolbar;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -14,11 +18,34 @@ import android.widget.Toast;
 
 import com.example.administrator.mdapplication.R;
 
+/**
+ * 返回键导航主要操作如下：
+ * <p>
+ * 1、  返回键导航的显示与隐藏：setDisplayHomeAsUpEnabled(Boolean flag)
+ * 2、  返回键导航的图标设置：setHomeAsUpIndicator
+ * 3、  返回键的事件处理：重写onOptionsItemSelected方法，做如下判断
+ * <p>
+ * 返回按钮具体实现（添加Toolbar的返回按钮）
+ * getSupportActionBar()
+ * setDisplayHomeAsUpEnabled(true)
+ * <p>
+ * Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+ * setSupportActionBar(toolbar);
+ * if(getSupportActionBar() != null)
+ * // Enable the Up button
+ * getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+ * }
+ * 链接：http://www.jianshu.com/p/12570217636c
+ *
+ * http://www.jianshu.com/p/12570217636c
+ *
+ *
+ */
+
 public class ToolBarActivity extends AppCompatActivity {
     private Toolbar toolbar;
-    private TextView text;
 
-    public static void startActivity(Context context ){
+    public static void startActivity(Context context) {
         Intent intent = new Intent(context, ToolBarActivity.class);
         context.startActivity(intent);
     }
@@ -28,15 +55,56 @@ public class ToolBarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_toolbar);
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Title");
-        toolbar.setSubtitle("SubTitle");
-        toolbar.setLogo(R.mipmap.ic_launcher);
+        initView();
 
+        initData();
+
+        initClick();
+    }
+
+    private void initView() {
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+    }
+
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
+    private void initData() {
+
+        toolbar.setTitle("Title");
+        toolbar.setTitleTextColor(getResources().getColor(R.color.white));
+//        toolbar.setSubtitle("SubTitle");
+//        toolbar.setLogo(R.mipmap.ic_launcher);
         //设置导航图标要在setSupportActionBar方法之后
         setSupportActionBar(toolbar);
-        //设置最左边的导航bar
-        toolbar.setNavigationIcon(R.mipmap.ic_launcher_round);
+
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            //左边返回键
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            //可自定义返回键
+//        getSupportActionBar().setHomeAsUpIndicator(android.support.v7.appcompat.R.drawable.abc_ic_ab_back_material);
+            //toolbar自带的标题可见
+            actionBar.setDisplayShowTitleEnabled(true);
+
+        }
+
+
+    }
+
+
+    /**
+     * toolbar右边的菜单选项
+     *
+     * @param menu
+     */
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_toolbar, menu);
+        return true;
+    }
+
+
+    private void initClick() {
 
         //菜单点击事件
         toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
@@ -44,7 +112,7 @@ public class ToolBarActivity extends AppCompatActivity {
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.action_search:
-                        Toast.makeText(ToolBarActivity.this, "Search !", Toast.LENGTH_SHORT).show();
+                        SearchActivity.startActivity(ToolBarActivity.this);
                         break;
                     case R.id.action_notifications:
                         Toast.makeText(ToolBarActivity.this, "Notificationa !", Toast.LENGTH_SHORT).show();
@@ -56,39 +124,8 @@ public class ToolBarActivity extends AppCompatActivity {
                 return true;
             }
         });
-
-        Button btn = (Button) findViewById(R.id.btn);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                SearchActivity.startActivity(ToolBarActivity.this);
-            }
-        });
-
-        text = (TextView) findViewById(R.id.tv_title);
-        findViewById(R.id.tv_title).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                test();
-            }
-        });
     }
 
-    private void test() {
-        text.setText("test");
-    }
-
-    /**
-     *  toolbar右边的菜单选项
-     * @param menu
-     * @return
-     */
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_toolbar, menu);
-        return true;
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

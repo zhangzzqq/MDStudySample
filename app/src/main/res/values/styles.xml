@@ -18,6 +18,9 @@
         <item name="overlapAnchor">false</item>
     </style>
 
+    <style name="spinnerTheme" parent="@android:style/Theme.Light">
+    </style>
+
 
 
 
