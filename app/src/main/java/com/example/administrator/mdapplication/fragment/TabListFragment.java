@@ -13,7 +13,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 
-import com.example.administrator.mdapplication.PaletteDetailActivity;
+import com.example.administrator.mdapplication.activities.PaletteDetailActivity;
 import com.example.administrator.mdapplication.R;
 
 

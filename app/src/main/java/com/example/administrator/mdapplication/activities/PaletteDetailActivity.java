@@ -1,4 +1,4 @@
-package com.example.administrator.mdapplication;
+package com.example.administrator.mdapplication.activities;
 
 import android.graphics.BitmapFactory;
 import android.os.Build;
@@ -13,11 +13,13 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.ScrollView;
 
+import com.example.administrator.mdapplication.*;
+
 /**
  * Created by steven
  *
  */
-public class PaletteDetailActivity extends BaseActivity {
+public class PaletteDetailActivity extends com.example.administrator.mdapplication.BaseActivity {
 
     public static final String EXTRA_INDEX = "index";
     private CollapsingToolbarLayout mToolbarCtl;

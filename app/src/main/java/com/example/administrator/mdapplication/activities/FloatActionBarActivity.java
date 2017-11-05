@@ -1,4 +1,4 @@
-package com.example.administrator.mdapplication;
+package com.example.administrator.mdapplication.activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -21,6 +21,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.example.administrator.mdapplication.*;
 import com.example.administrator.mdapplication.fragment.TabListFragment;
 
 import java.util.ArrayList;
@@ -30,7 +31,7 @@ import java.util.List;
  * Created by steven on 2017/10/29 0029.
  */
 
-public class FloatActionBarActivity extends BaseActivity {
+public class FloatActionBarActivity extends com.example.administrator.mdapplication.BaseActivity {
 
     private DrawerLayout mRootDl;
     private LinearLayout mMenuLl;

@@ -1,4 +1,4 @@
-package com.example.administrator.mdapplication;
+package com.example.administrator.mdapplication.activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,28 +12,31 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.administrator.mdapplication.*;
+
 import java.text.DecimalFormat;
 
 /**
  * Created by yifeng on 16/8/10.
  *
  */
-public class BehaviorNestedActivity extends BaseActivity {
+public class BehaviorNestedExpandActivity extends com.example.administrator.mdapplication.BaseActivity {
 
     private RecyclerView mContentRv;
 
 
     public static void startActivity(Context context ){
-        Intent intent = new Intent(context, BehaviorNestedActivity.class);
+        Intent intent = new Intent(context, BehaviorNestedExpandActivity.class);
         context.startActivity(intent);
     }
+
 
 
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_custom_behavior_nested);
+        setContentView(R.layout.activity_behavior_expend);
 
         mContentRv = (RecyclerView) findViewById(R.id.rv_content);
         mContentRv.setLayoutManager(new LinearLayoutManager(this));
@@ -51,7 +54,7 @@ public class BehaviorNestedActivity extends BaseActivity {
 
         @Override
         public ContentAdapter.ContentHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            return new ContentHolder(LayoutInflater.from(BehaviorNestedActivity.this).inflate(android.R.layout.simple_list_item_1, parent, false));
+            return new ContentHolder(LayoutInflater.from(BehaviorNestedExpandActivity.this).inflate(android.R.layout.simple_list_item_1, parent, false));
         }
 
         @Override

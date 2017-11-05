@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.example.administrator.mdapplication.MainActivity;
+import com.example.administrator.mdapplication.activities.MainActivity;
 import com.example.administrator.mdapplication.R;
 
 import java.util.List;

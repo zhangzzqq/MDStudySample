@@ -1,4 +1,4 @@
-package com.example.administrator.mdapplication;
+package com.example.administrator.mdapplication.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +7,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.example.administrator.mdapplication.R;
+import com.example.administrator.mdapplication.SwitchStudy;
+import com.example.administrator.mdapplication.TextInputActivity;
+import com.example.administrator.mdapplication.TextInputLayoutStudy;
 import com.example.administrator.mdapplication.adapter.DataListAdapter;
 import com.example.administrator.mdapplication.snackbar.SnackbarActivity;
 import com.example.administrator.mdapplication.tablayout.TabLayoutBottomActivity;
@@ -103,6 +107,21 @@ public class MainActivity extends AppCompatActivity {
                         SpinnerStudy.startActivity(MainActivity.this);
                         break;
 
+                    case 13:
+                        SwitchStudy.startActivity(MainActivity.this);
+                        break;
+
+                    case 14:
+                        CheckedTextViewStudy.startActivity(MainActivity.this);
+                        break;
+
+                    case 15:
+                        TextInputLayoutStudy.startActivity(MainActivity.this);
+                        break;
+                    case 16:
+                        NestedScrollingActivity.startActivity(MainActivity.this);
+                        break;
+
                 }
             }
         });
@@ -123,6 +142,10 @@ public class MainActivity extends AppCompatActivity {
         list.add("textInput");
         list.add("BottomNavigation");
         list.add("spinner");
+        list.add("switch");
+        list.add("checkedTextViewStudy");
+        list.add("TextInputLayoutStudy");
+        list.add("ScrollingActivityStudy");
 
         return list;
 

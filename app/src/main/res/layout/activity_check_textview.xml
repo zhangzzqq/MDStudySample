@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--<ListView xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:dividerHeight="1dp"-->
+        <!--android:listSelector="@android:color/transparent"-->
+        <!--android:orientation="vertical"-->
+        <!--android:overScrollMode="never"-->
+        <!--android:scrollbars="none"-->
+        <!--/>-->
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <CheckedTextView
+            android:id="@+id/main_ctv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center_horizontal"
+            android:text="CheckedTextView1" />
+
+        <CheckedTextView
+            android:id="@+id/main_ctv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="20dp"
+            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center_horizontal"
+            android:text="CheckedTextView2" />
+
+        <ListView
+            android:id="@+id/main_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

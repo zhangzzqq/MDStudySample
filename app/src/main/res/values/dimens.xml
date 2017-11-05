@@ -20,7 +20,7 @@
     <dimen name="px_1">1px</dimen>
 
     <dimen name="card_margin">0dp</dimen>
-
+    <dimen name="intro_margin_20">20dp</dimen>
 
 
 </resources>

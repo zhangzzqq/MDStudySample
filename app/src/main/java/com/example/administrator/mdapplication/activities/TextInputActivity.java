@@ -1,4 +1,4 @@
-package com.example.administrator.mdapplication;
+package com.example.administrator.mdapplication.activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,7 +8,7 @@ import android.support.design.widget.TextInputLayout;
 import android.view.View;
 import android.widget.EditText;
 
-
+import com.example.administrator.mdapplication.R;
 import com.example.administrator.mdapplication.utils.ToastUtils;
 
 import java.util.regex.Matcher;

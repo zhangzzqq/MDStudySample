@@ -1,4 +1,4 @@
-package com.example.administrator.mdapplication;
+package com.example.administrator.mdapplication.activities;
 
 import android.app.SearchManager;
 import android.content.Context;
@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
+import com.example.administrator.mdapplication.*;
 import com.example.administrator.mdapplication.utils.ToastUtils;
 
 
@@ -14,7 +15,7 @@ import com.example.administrator.mdapplication.utils.ToastUtils;
  *
  */
 
-public class SearchResultActivity extends BaseActivity {
+public class SearchResultActivity extends com.example.administrator.mdapplication.BaseActivity {
 
 
     public static void startActivity(Context context ){

@@ -1,16 +1,18 @@
-package com.example.administrator.mdapplication;
+package com.example.administrator.mdapplication.activities;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
+import com.example.administrator.mdapplication.*;
+
 /**
  * Created by yifeng on 17/3/26.
  *
  */
 
-public class BottomNavigationActivity extends BaseActivity {
+public class BottomNavigationActivity extends com.example.administrator.mdapplication.BaseActivity {
 
 
     public static void startActivity(Context context ){

@@ -4,9 +4,9 @@
     android:id="@+id/tb_toolbar"
     android:layout_width="match_parent"
     android:layout_height="@dimen/dp_56"
-    app:title="@string/app_name"
-    app:theme="@style/OverFlowMenuTheme"
-    app:popupTheme="@style/AppTheme"
     android:background="@color/blue"
-    app:layout_scrollFlags="scroll|enterAlways"/>
+    app:layout_scrollFlags="scroll|enterAlways"
+    app:popupTheme="@style/AppTheme"
+    app:theme="@style/OverFlowMenuTheme"
+    app:title="@string/app_name" />
 

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/intro_margin_20"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/ic_launcher" />
+
+    <CheckedTextView
+        android:id="@+id/checktv_title"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/listPreferredItemHeight"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/img_icon"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:filterTouchesWhenObscured="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="6dip"
+        android:paddingRight="6dip"
+        android:text="公司"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="12sp" />
+
+</RelativeLayout>

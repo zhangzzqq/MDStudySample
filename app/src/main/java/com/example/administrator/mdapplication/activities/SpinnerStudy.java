@@ -1,4 +1,4 @@
-package com.example.administrator.mdapplication;
+package com.example.administrator.mdapplication.activities;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.administrator.mdapplication.R;
 import com.example.administrator.mdapplication.adapter.MyAdapter;
 
 import java.util.ArrayList;

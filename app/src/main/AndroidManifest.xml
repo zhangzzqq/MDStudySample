@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,23 +17,68 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".toolbar.SearchActivity"/>
-        <activity android:name=".toolbar.ToolBarActivity"/>
-        <activity android:name=".tablayout.TabLayoutTopActivity"/>
-        <activity android:name=".tablayout.TabLayoutBottomActivity"/>
-        <activity android:name=".snackbar.SnackbarActivity"/>
-        <activity android:name=".PaletteDetailActivity" />
-        <activity android:name=".FloatActionBarActivity" />
-        <activity android:name=".AppBarLayoutActivity" />
-        <activity android:name=".BehaviorDependentActivity" />
-        <activity android:name=".BehaviorNestedActivity" />
-        <activity android:name=".BehaviorNestedExpandActivity" />
-        <activity android:name=".SearchResultActivity" />
-        <activity android:name=".TextInputActivity" />
-        <activity android:name=".BottomNavigationActivity" />
-        <activity android:name=".SpinnerStudy"
-            />
+        <activity
+            android:name=".toolbar.SearchActivity"
+            android:label="SearchSamples" />
+        <activity
+            android:name=".toolbar.ToolBarActivity"
+            android:label="ToolBarSamples" />
+        <activity
+            android:name=".tablayout.TabLayoutTopActivity"
 
+            android:label="TabLayoutTopSamples" />
+        <activity
+            android:name=".tablayout.TabLayoutBottomActivity"
+            android:label="TabLayoutBottomSamples" />
+        <activity
+            android:name=".snackbar.SnackbarActivity"
+            android:label="SnackbarSamples" />
+        <activity
+            android:name=".activities.PaletteDetailActivity"
+            android:label="PaletteDetailSamples" />
+        <activity
+            android:name=".activities.FloatActionBarActivity"
+            android:label="FloatActionBarSamples" />
+        <activity
+            android:name=".activities.AppBarLayoutActivity"
+            android:label="AppBarLayout" />
+        <activity
+            android:name=".activities.BehaviorDependentActivity"
+            android:label="BehaviorDependent" />
+        <activity
+            android:name=".activities.BehaviorNestedActivity"
+            android:label="BehaviorNested" />
+        <activity
+            android:name=".activities.BehaviorNestedExpandActivity"
+
+            android:label="BehaviorNestedExpand" />
+        <activity
+            android:name=".activities.SearchResultActivity"
+            android:label="SearchResult" />
+        <activity
+            android:name=".TextInputActivity"
+            android:label="TextInput" />
+        <activity
+            android:name=".activities.BottomNavigationActivity"
+            android:label="BottomNavigation" />
+        <activity
+            android:name=".activities.SpinnerStudy"
+            android:label="SpinnerStudy"
+
+            />
+        <activity
+            android:name=".SwitchStudy"
+            android:label="SwitchStudy" />
+        <activity
+            android:name=".activities.CheckedTextViewStudy"
+            android:label="CheckedTextView" />
+        <activity
+            android:name=".TextInputLayoutStudy"
+            android:label="TextInputLayoutStudy" />
+
+        <activity
+            android:name=".activities.NestedScrollingActivity"
+            android:label="ScrollingActivity" />
 
 
     </application>

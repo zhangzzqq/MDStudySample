@@ -1,4 +1,4 @@
-package com.example.administrator.mdapplication;
+package com.example.administrator.mdapplication.activities;
 
 import android.app.SearchManager;
 import android.app.Service;
@@ -12,11 +12,13 @@ import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.View;
 
+import com.example.administrator.mdapplication.*;
+
 /**
  * Created by yifeng on 16/8/10.
  *
  */
-public class BehaviorDependentActivity extends BaseActivity {
+public class BehaviorDependentActivity extends com.example.administrator.mdapplication.BaseActivity {
 
 
     public static void startActivity(Context context ){
