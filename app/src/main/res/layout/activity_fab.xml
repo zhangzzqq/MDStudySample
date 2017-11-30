@@ -29,16 +29,14 @@
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab_add"
+
+        <LinearLayout
+            android:layout_gravity="bottom|"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dp_16"
-            android:onClick="onClickFab"
-            android:src="@mipmap/ic_toolbar_add"
-            app:backgroundTint="@color/fab_ripple"
-            app:layout_anchor="@id/vp_content"
-            app:layout_anchorGravity="bottom|right|end" />
+            android:layout_height="wrap_content">
+
+
+        </LinearLayout>
 
     </android.support.design.widget.CoordinatorLayout>
 

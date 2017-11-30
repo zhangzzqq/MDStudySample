@@ -52,10 +52,12 @@ public class TabLayoutBottomActivity extends BaseActivity {
     }
 
     private void initTab(){
+
         mTabTl.setTabMode(TabLayout.MODE_FIXED);
         mTabTl.setSelectedTabIndicatorHeight(0);
         ViewCompat.setElevation(mTabTl, 10);
         mTabTl.setupWithViewPager(mContentVp);
+
         for (int i = 0; i < tabIndicators.size(); i++) {
             TabLayout.Tab itemTab = mTabTl.getTabAt(i);
             if (itemTab!=null){

@@ -1,0 +1,92 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/clearBut"
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:onClick="clearFunction"
+                android:text="Clear" />
+
+            <Button
+                android:textAllCaps="false"
+                android:id="@+id/stringBut"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:onClick="testStringFunction"
+                android:text="TestString" />
+
+            <Button
+                android:textAllCaps="false"
+                android:id="@+id/stringArrayBut"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:onClick="testStringArrayFunction"
+                android:text="TestStringArray" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:textAllCaps="false"
+                android:id="@+id/htmlTagBut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="htmlStrFunction"
+                android:text="HTML-String" />
+
+            <Button
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tagged_string3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:textAllCaps="false"
+                android:id="@+id/format_taggedBut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="formatTaggedFunction"
+                android:text="TestFormat_tagged" />
+
+            <Button
+                android:textAllCaps="false"
+                android:id="@+id/pluralsBut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="pluralFunction"
+                android:text="TestPlural" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+</LinearLayout>

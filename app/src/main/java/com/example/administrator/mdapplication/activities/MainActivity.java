@@ -48,20 +48,18 @@ public class MainActivity extends AppCompatActivity {
     private void initData() {
         mList = (ListView) findViewById(R.id.listView);
 
-        DataListAdapter adapter = new DataListAdapter(getData(),this);
+        DataListAdapter adapter = new DataListAdapter(getData(), this);
         mList.setAdapter(adapter);
     }
-
-
 
     private void initClick() {
 
         mList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (position){
+                switch (position) {
                     case 0:
-                        ToolBarActivity.startActivity(MainActivity.this);
+                        AndroidTest.start(MainActivity.this);
                         break;
                     case 1:
                         TabLayoutTopActivity.startActivity(MainActivity.this);
@@ -122,6 +120,10 @@ public class MainActivity extends AppCompatActivity {
                         NestedScrollingActivity.startActivity(MainActivity.this);
                         break;
 
+                    case 17:
+                        ToolBarActivity.startActivity(MainActivity.this);
+                        break;
+
                 }
             }
         });
@@ -129,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
 
     private List getData() {
 
-        list.add("toolBar");
+        list.add("AndroidTest");
         list.add("tabLayoutTop");
         list.add("tabLayoutBottom");
         list.add("snackbar");
@@ -146,6 +148,7 @@ public class MainActivity extends AppCompatActivity {
         list.add("checkedTextViewStudy");
         list.add("TextInputLayoutStudy");
         list.add("ScrollingActivityStudy");
+        list.add("ToolBar");
 
         return list;
 

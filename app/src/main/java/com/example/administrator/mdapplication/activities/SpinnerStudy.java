@@ -5,9 +5,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
@@ -109,6 +111,16 @@ public class SpinnerStudy extends AppCompatActivity {
         spinner.setPopupBackgroundResource(R.color.gray);
         spinner.setAdapter(_Adapter2);
         spinner.setPrompt("品种");
+
+        String [] mItems=null;
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, mItems){
+
+
+            @Override
+            public View getDropDownView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+                return super.getDropDownView(position, convertView, parent);
+            }
+        };
 //===============================方法2=====================================
 
         spinner01 = (Spinner) findViewById(R.id.Spinner01);

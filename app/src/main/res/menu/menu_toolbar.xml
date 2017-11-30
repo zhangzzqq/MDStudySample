@@ -5,14 +5,15 @@
     <item android:id="@+id/action_search"
         android:title="Search"
         android:icon="@mipmap/search"
-        app:showAsAction="never"/>
+        app:showAsAction="ifRoom"/>
     <item android:id="@+id/action_notifications"
         android:title="notifications"
         android:icon="@mipmap/ring"
-        app:showAsAction="never"/>
+        app:showAsAction="ifRoom"/>
+
     <item android:id="@+id/action_settings"
         android:title="@string/action_settings"
         android:orderInCategory="100"
         android:icon="@mipmap/ic_launcher"
-        app:showAsAction="never"/>
+        app:showAsAction="ifRoom"/>
 </menu>

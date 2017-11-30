@@ -19,5 +19,69 @@
 “两岸在相互往来合作中逐渐彼此融合，直至实现最终统一将是谁也无法阻挡的历史潮流。”王毅说。
 王毅表示，多年来，台湾问题始终是中美关系中损害互信、干扰合作的一项负资产。如果美方能够顺应两岸关系和平发展的大势，切实理解和尊重中国反对分裂，致力于和平统一的努力，那么台湾问题就会从中美关系的负资产变成正资产，从消极因素变成积极因素，就能为中美关系长期稳定发展提供保障，为中美开展全方位合作开辟前景。[8] </string>
 
+    <string name="india_national">　
+     印度人的心和命运都由你管辖，\n
+　　你的名字使全国奋发，\n
+　　旁遮普、辛德、吉甲拉特、马拉塔、\n
+　　达罗毗荼、奥利萨、孟加拉；\n
+　　文底那、喜马拉雅发出回响，\n
+　　朱木拿、恒河奏乐回答，\n
+　　印度洋的波浪唱着歌，\n
+　　向你颂赞向你祝福，\n
+　　一切人都等你拯拔。\n
+　　印度人的心和命运都由你管辖，\n
+　　你永远无敌于天下。\n</string>
+
+
+    <!-- 测试字符串资源 -->
+    <string name="simple_string">simple string</string>
+
+    <string name="single_quoted_string">"single quoted'string"</string>
+    <!-- <string name="str">single quoted'string</string> 该行编译时会报错：error: Apostrophe not preceded by \ (in single quoted'string)	-->
+    <string name="single_quoted_string2">single quoted\'string</string>
+
+    <string name="double_quoted_string">\"double quotes\"</string>
+    <string name="double_quoted_string2">"double quotes"</string>
+    <!-- 	<string name="str3">'"double quotes"'</string> 该行编译会报错-->
+
+    <string name="format_string">
+	    Hello, I am %2$d years old, My name is %1$s.
+	</string>
+
+    <string name="tagged_string1">	<!-- 通过getText()方法获取有样式效果，或者在其他xml文件中通过@string/引用也有效果  -->
+        <b>Bold</b>, <i>italic</i>, <u>underline</u>.
+	</string>
+    <string name="tagged_string2">	<!-- 通过getString()获取后，通过Html.fromHtml()方法处理好有效果 -->
+        &lt;b>Bold&lt;/b>, &lt;i>italic&lt;/i>, &lt;u>underline&lt;/u>.
+	</string>
+    <string name="tagged_string3">	<!-- 通过getString()获取后，通过Html.fromHtml()方法处理好有效果 -->
+        <![CDATA[
+	      		<b>Bold</b>, <i>italic</i>, <u>underline</u>.
+	      		<br/>
+	      		<h1>font</h1>
+	      ]]>
+	</string>
+
+    <string name="format_tagged_string">Hello, %1$s! You have &lt;b>%2$d new messages&lt;/b>.</string>
+
+
+    <!-- To support arrays -->
+    <string-array name="test_array">
+        <item>one</item>
+        <item>two</item>
+        <item>three</item>
+        <item>@string/simple_string</item>    <!-- 引用其他string资源 -->
+        <item>"single quoted'string"</item>
+        <item>single quoted\'string</item>
+        <item>\"double quotes\"</item>
+        <item>"double quotes"</item>
+    </string-array>
+
+
+    <!-- To support plurals -->
+    <plurals name="test_plurals">
+        <item quantity='one'>You are one</item>
+        <item quantity='other'>You are many</item>
+    </plurals>
 
 </resources>

@@ -80,6 +80,14 @@
             android:name=".activities.NestedScrollingActivity"
             android:label="ScrollingActivity" />
 
+        <activity android:name=".activities.RecyclerViewTest"/>
+        <activity android:name=".activities.ToggleActivity"/>
+        <activity android:name=".activities.AlertDialogTest"/>
+        <activity android:name=".activities.WindowSoftInputTest"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            />
+        <activity android:name=".activities.AndroidTest"/>
+
 
     </application>
 

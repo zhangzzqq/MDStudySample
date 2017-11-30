@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--带阴影的圆角矩形
+    android:top 顶部的偏移量
+android:bottom 底部的偏移量
+android:left 左边的偏移量
+android:right 右边的偏移量
+    -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--  最下层是灰色的 -->
+    <item
+        android:left="2dp"
+        android:top="4dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/darker_gray" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+    <!-- 上一层是白色(前景) -->
+    <item
+        android:bottom="4dp"
+        android:right="2dp">
+        <shape>
+            <solid android:color="#FFFFFF" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+</layer-list>
