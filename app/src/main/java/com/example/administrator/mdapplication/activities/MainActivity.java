@@ -1,5 +1,6 @@
 package com.example.administrator.mdapplication.activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -123,7 +124,12 @@ public class MainActivity extends AppCompatActivity {
                     case 17:
                         ToolBarActivity.startActivity(MainActivity.this);
                         break;
-
+                    case 18:
+                        FragmentStudyTest.startActivity(MainActivity.this);
+                        break;
+                    case 19:
+                        startActivity(new Intent(MainActivity.this,TabFragmentActivityTest.class));
+                        break;
                 }
             }
         });
@@ -149,6 +155,8 @@ public class MainActivity extends AppCompatActivity {
         list.add("TextInputLayoutStudy");
         list.add("ScrollingActivityStudy");
         list.add("ToolBar");
+        list.add("fragmentStudy");
+        list.add("tabFragmentActivity");
 
         return list;
 

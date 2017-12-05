@@ -25,13 +25,14 @@ public class AndroidTest extends AppCompatActivity {
     private EditText chatsView;
     private Button btnJson;
     private Button javatest;
-    private  String str = "姓名:朱锡浩1<br/>性别:女<br/>年龄:60岁<br/>过敏史:<br/>入科诊断:ds22,bbbb,cc,fsda,<br/>当前诊断:123213123<br/>VS目标值:瞳孔:12/22;";
+    private String str = "姓名:朱锡浩1<br/>性别:女<br/>年龄:60岁<br/>过敏史:<br/>入科诊断:ds22,bbbb,cc,fsda,<br/>当前诊断:123213123<br/>VS目标值:瞳孔:12/22;";
     private TextView tvLine;
 
-    public static void start (Context context){
-        Intent intent = new Intent(context,AndroidTest.class);
+    public static void start(Context context) {
+        Intent intent = new Intent(context, AndroidTest.class);
         context.startActivity(intent);
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +56,7 @@ public class AndroidTest extends AppCompatActivity {
         setToMessage("123456");
         toJump();
 //        tvLine.setText((str.replace("|","<br/>")));
-        str=str.replace("<br/>","\n");
+        str = str.replace("<br/>", "\n");
         tvLine.setText(str);
 
 //        btnJson.setSelected(true);
@@ -129,14 +130,15 @@ public class AndroidTest extends AppCompatActivity {
         }
     };
 
-    private  String result;
-    private   String strNewResult;
+    private String result;
+    private String strNewResult;
+
     private void testData() {
 
-        result="5/8/9";
+        result = "5/8/9";
         strNewResult = result.substring(1, result.length());
-        System.out.println("strNewResult=="+strNewResult);
-        Log.d(AndroidTest.class.getName(),"result=="+strNewResult);
+        System.out.println("strNewResult==" + strNewResult);
+        Log.d(AndroidTest.class.getName(), "result==" + strNewResult);
 
     }
 
@@ -151,12 +153,14 @@ public class AndroidTest extends AppCompatActivity {
         PostNursingPlanRemindEntity entity = new Gson().fromJson(strJson, PostNursingPlanRemindEntity.class);
         Toast.makeText(AndroidTest.this, entity.getResultCode() + entity.getMessage(), Toast.LENGTH_SHORT).show();
 
+        if (strJson != "") {
 
+        }
     }
 
 
-    public void btnImageView(View view){
-        Intent intent = new Intent(AndroidTest.this,ImageActivity.class);
+    public void btnImageView(View view) {
+        Intent intent = new Intent(AndroidTest.this, ImageActivity.class);
         startActivity(intent);
     }
 
@@ -165,13 +169,31 @@ public class AndroidTest extends AppCompatActivity {
         imm.hideSoftInputFromWindow(editText.getWindowToken(), 0); //强制隐藏键盘
     }
 
-    public void dialogTest(View view){
+    public void dialogTest(View view) {
         AlertDialogTest.start(view.getContext());
     }
 
-    public void windowSoftInputTest(View view){
+    public void windowSoftInputTest(View view) {
 
         WindowSoftInputTest.start(view.getContext());
 
     }
+
+    public void btn9png(View view) {
+
+        startActivity(new Intent(AndroidTest.this, Png9Activity.class));
+
+    }
+
+    public void btnNullTest(View view) {
+
+        startActivity(new Intent(AndroidTest.this, btnNullTest.class));
+
+    }  public void editTest(View view) {
+
+        startActivity(new Intent(AndroidTest.this, EditTestActivity.class));
+
+    }
+
+
 }

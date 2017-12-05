@@ -8,6 +8,16 @@ public class Person {
 
     private String personName;
     private String personAddress;
+    private String eat;
+
+    public String getEat() {
+        eat=null;
+        return eat;
+    }
+
+    public void setEat(String eat) {
+        this.eat = eat;
+    }
 
     public Person(String personName, String personAddress) {
         this.personName = personName;

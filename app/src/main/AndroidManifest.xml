@@ -80,13 +80,30 @@
             android:name=".activities.NestedScrollingActivity"
             android:label="ScrollingActivity" />
 
-        <activity android:name=".activities.RecyclerViewTest"/>
-        <activity android:name=".activities.ToggleActivity"/>
-        <activity android:name=".activities.AlertDialogTest"/>
-        <activity android:name=".activities.WindowSoftInputTest"
-            android:windowSoftInputMode="stateHidden|adjustPan"
-            />
-        <activity android:name=".activities.AndroidTest"/>
+        <activity android:name=".activities.RecyclerViewTest" />
+        <activity android:name=".activities.ToggleActivity" />
+        <activity android:name=".activities.AlertDialogTest" />
+        <activity
+            android:name=".activities.WindowSoftInputTest"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".activities.AndroidTest"
+            android:label="AndroidTest" />
+        <activity
+            android:name=".activities.FragmentStudyTest"
+            android:label="FragmentStudy" />
+        <activity
+            android:name=".activities.TabFragmentActivityTest"
+            android:label="tabFragmentActivity" />
+        <activity
+            android:name=".activities.Png9Activity"
+            android:label=".9PngActivity" />
+        <activity
+            android:name=".activities.btnNullTest"
+            android:label=".nullTestActivity" />
+        <activity
+            android:name=".activities.EditTestActivity"
+            android:label=".nullTestActivity" />
 
 
     </application>

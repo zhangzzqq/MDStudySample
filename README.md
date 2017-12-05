@@ -33,3 +33,15 @@ http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2014/0925/1713.html
 2. 给需要滑动的组件设置 app:layout_scrollFlags=”scroll|enterAlways” 属性。
 3. 给滑动的组件设置app:layout_behavior属性
 
+
+fragmentStudyTest
+
+To make fragment transactions in your activity (such as add, remove, or replace a fragment), you must use APIs from FragmentTransaction. You can get an instance of FragmentTransaction from your Activity like this:
+FragmentManager fragmentManager = getFragmentManager()
+FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+You can then add a fragment using the add() method, specifying the fragment to add and the view in which to insert it. For example:
+ExampleFragment fragment = new ExampleFragment();
+fragmentTransaction.add(R.id.fragment_container, fragment);
+fragmentTransaction.commit();
+The first argument passed to add() is the ViewGroup in which the fragment should be placed, specified by resource ID, and the second parameter is the fragment to add.
+Once you've made your changes with FragmentTransaction, you must call commit() for the changes to take effect.

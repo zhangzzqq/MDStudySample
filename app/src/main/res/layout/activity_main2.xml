@@ -157,6 +157,23 @@
             android:text="AlertDialogTest" />
 
 
+        <Button
+            android:onClick="btn9png"
+            android:text=".9png"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:onClick="btnNullTest"
+            android:text="nullTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:onClick="editTest"
+            android:text="editTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
 </ScrollView>
