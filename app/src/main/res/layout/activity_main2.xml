@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="#FFB6B5B5">
 
     <LinearLayout
@@ -174,6 +175,18 @@
             android:text="editTest"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_null_text"
+            tools:text="null判断"
+            android:text="null判断"
+            android:textColor="@color/white"
+            android:onClick="tvNull"
+            android:gravity="center"
+            android:background="@color/blue_600"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
     </LinearLayout>
 
 </ScrollView>

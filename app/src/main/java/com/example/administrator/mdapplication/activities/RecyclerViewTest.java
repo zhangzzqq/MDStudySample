@@ -78,7 +78,7 @@ public class RecyclerViewTest extends AppCompatActivity {
         recyclerAdapter.notifyDataSetChanged();
     }
 
-
+//adapter.notifyItemRangeChanged(position, data.size() - position);
     private View.OnClickListener clicks = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -89,12 +89,12 @@ public class RecyclerViewTest extends AppCompatActivity {
                 case R.id.add:
                     list.add(1, "add data1");
                     recyclerAdapter.notifyItemInserted(1);
-                    recyclerAdapter.notifyItemRangeChanged(1, 0);
+                    recyclerAdapter.notifyItemRangeChanged(1, list.size()-1);
                     break;
                 case R.id.delete:
                     list.remove(1);
                     recyclerAdapter.notifyItemRemoved(1);
-                    recyclerAdapter.notifyItemRangeChanged(1, 0);
+                    recyclerAdapter.notifyItemRangeChanged(1, list.size()-1);
                     break;
 
 

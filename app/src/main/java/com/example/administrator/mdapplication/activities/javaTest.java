@@ -1,5 +1,7 @@
 package com.example.administrator.mdapplication.activities;
 
+import com.example.administrator.mdapplication.utils.NumberUtils;
+
 /**
  * Created by steven on 2017/11/13 0013.
  */
@@ -7,14 +9,17 @@ package com.example.administrator.mdapplication.activities;
 public class javaTest {
 
     private static String result;
-    private static  String strNewResult;
-
+    private static String strNewResult;
 
 
     public static void main(String agrs[]) {
-        result="5/8/9";
+        result = "5/8/9";
         strNewResult = result.substring(1, result.length());
-        System.out.println("strNewResult=="+strNewResult);
+        System.out.println("strNewResult==" + strNewResult);
+
+        String strResult = NumberUtils.toString(1.260, 10);
+        System.out.println(strResult);
+
 
     }
 

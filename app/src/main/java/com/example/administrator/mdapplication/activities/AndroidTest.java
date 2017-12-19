@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -15,6 +16,8 @@ import android.widget.Toast;
 
 import com.example.administrator.mdapplication.R;
 import com.google.gson.Gson;
+
+import model.Person;
 
 public class AndroidTest extends AppCompatActivity {
 
@@ -189,9 +192,40 @@ public class AndroidTest extends AppCompatActivity {
 
         startActivity(new Intent(AndroidTest.this, btnNullTest.class));
 
-    }  public void editTest(View view) {
+    }
+
+    public void editTest(View view) {
 
         startActivity(new Intent(AndroidTest.this, EditTestActivity.class));
+
+    }
+
+    public void tvNull(View view) {
+
+       TextView textView = (TextView) findViewById(R.id.tv_null_text);
+//        Person person = new Person("","");
+//        String strResult = person.getEat();
+//        Log.e(AndroidTest.class.getName(),"strResult=="+strResult);
+//        textView.setText(person.getEat());
+
+        String a ="1";
+        String b =null;
+        String c ="";
+        if(a.equals(b)){
+            textView.setText("a.equals.b");
+        }
+
+        if(a.equals(c)){
+            textView.setText("a.equals.c");
+        }
+
+        if(!TextUtils.isEmpty(b)){
+            Toast.makeText(AndroidTest.this,"非空",Toast.LENGTH_SHORT).show();
+
+        }else {
+            Toast.makeText(AndroidTest.this,"空",Toast.LENGTH_SHORT).show();
+                textView.setText(b);
+        }
 
     }
 
