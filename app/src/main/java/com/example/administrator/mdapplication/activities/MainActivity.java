@@ -13,6 +13,7 @@ import com.example.administrator.mdapplication.SwitchStudy;
 import com.example.administrator.mdapplication.TextInputActivity;
 import com.example.administrator.mdapplication.TextInputLayoutStudy;
 import com.example.administrator.mdapplication.adapter.DataListAdapter;
+import com.example.administrator.mdapplication.enumerate.EnumerateActivity;
 import com.example.administrator.mdapplication.snackbar.SnackbarActivity;
 import com.example.administrator.mdapplication.tablayout.TabLayoutBottomActivity;
 import com.example.administrator.mdapplication.tablayout.TabLayoutTopActivity;
@@ -130,6 +131,9 @@ public class MainActivity extends AppCompatActivity {
                     case 19:
                         startActivity(new Intent(MainActivity.this,TabFragmentActivityTest.class));
                         break;
+                    case 20:
+                        startActivity(new Intent(MainActivity.this,EnumerateActivity.class));
+                        break;
                 }
             }
         });
@@ -157,6 +161,7 @@ public class MainActivity extends AppCompatActivity {
         list.add("ToolBar");
         list.add("fragmentStudy");
         list.add("tabFragmentActivity");
+        list.add("EenumerateActivity");
 
         return list;
 

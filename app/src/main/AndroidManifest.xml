@@ -104,6 +104,9 @@
         <activity
             android:name=".activities.EditTestActivity"
             android:label=".nullTestActivity" />
+        <activity
+            android:name=".enumerate.EnumerateActivity"
+            android:label=".enumerateActivity" />
 
 
 

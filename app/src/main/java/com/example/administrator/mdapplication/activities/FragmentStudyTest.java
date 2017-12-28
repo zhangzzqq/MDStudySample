@@ -38,8 +38,8 @@ public class FragmentStudyTest extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fragment);
-//        setContentView(R.layout.activity_fragment_dynamic);
+//        setContentView(R.layout.activity_fragment);
+        setContentView(R.layout.activity_fragment_dynamic);
         Display display = getWindowManager().getDefaultDisplay();
         if (display.getWidth() > display.getHeight()) {
             Fragment1 fragment1 = new Fragment1();

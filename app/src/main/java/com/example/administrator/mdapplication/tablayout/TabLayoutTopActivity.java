@@ -66,7 +66,7 @@ public class TabLayoutTopActivity extends BaseActivity {
     private void initContent() {
 
         tabIndicators = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 8; i++) {
             tabIndicators.add("Tab " + i);
         }
         tabFragments = new ArrayList<>();
@@ -80,7 +80,8 @@ public class TabLayoutTopActivity extends BaseActivity {
 
     private void initTab(){
 
-        mTabTl.setTabMode(TabLayout.MODE_SCROLLABLE);
+//        mTabTl.setTabMode(TabLayout.MODE_SCROLLABLE);
+        mTabTl.setTabMode(TabLayout.MODE_FIXED);
         mTabTl.setTabTextColors(ContextCompat.getColor(this, R.color.gray), ContextCompat.getColor(this, R.color.white));
         mTabTl.setSelectedTabIndicatorColor(ContextCompat.getColor(this, R.color.white));
         ViewCompat.setElevation(mTabTl, 10);//tablayout 阴影效果
