@@ -1,8 +1,8 @@
 package com.example.administrator.mdapplication.activities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
@@ -17,6 +17,7 @@ import com.example.administrator.mdapplication.enumerate.EnumerateActivity;
 import com.example.administrator.mdapplication.snackbar.SnackbarActivity;
 import com.example.administrator.mdapplication.tablayout.TabLayoutBottomActivity;
 import com.example.administrator.mdapplication.tablayout.TabLayoutTopActivity;
+import com.example.administrator.mdapplication.threadpool.ThreadPoolTest;
 import com.example.administrator.mdapplication.toolbar.ToolBarActivity;
 
 import java.util.ArrayList;
@@ -129,10 +130,19 @@ public class MainActivity extends AppCompatActivity {
                         FragmentStudyTest.startActivity(MainActivity.this);
                         break;
                     case 19:
-                        startActivity(new Intent(MainActivity.this,TabFragmentActivityTest.class));
+                        startActivity(new Intent(MainActivity.this, TabFragmentActivityTest.class));
                         break;
                     case 20:
-                        startActivity(new Intent(MainActivity.this,EnumerateActivity.class));
+                        startActivity(new Intent(MainActivity.this, EnumerateActivity.class));
+                        break;
+                    case 21:
+                        startActivity(new Intent(MainActivity.this, ThreadPoolTest.class));
+                        break;
+                    case 22:
+                        startActivity(new Intent(MainActivity.this, CustomPropertyStudy.class));
+                        break;
+                    case 23:
+                        startActivity(new Intent(MainActivity.this, ImageButtonStudy.class));
                         break;
                 }
             }
@@ -161,7 +171,10 @@ public class MainActivity extends AppCompatActivity {
         list.add("ToolBar");
         list.add("fragmentStudy");
         list.add("tabFragmentActivity");
-        list.add("EenumerateActivity");
+        list.add("eenumerateActivity");
+        list.add("threadPoolTest");
+        list.add("customPropertyStudy");
+        list.add("imageButtonStudy");
 
         return list;
 

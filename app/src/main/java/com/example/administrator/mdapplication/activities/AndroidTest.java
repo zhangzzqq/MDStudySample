@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatCheckedTextView;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -17,8 +18,6 @@ import android.widget.Toast;
 import com.example.administrator.mdapplication.R;
 import com.google.gson.Gson;
 
-import model.Person;
-
 public class AndroidTest extends AppCompatActivity {
 
     private EditText editText;
@@ -30,6 +29,7 @@ public class AndroidTest extends AppCompatActivity {
     private Button javatest;
     private String str = "姓名:朱锡浩1<br/>性别:女<br/>年龄:60岁<br/>过敏史:<br/>入科诊断:ds22,bbbb,cc,fsda,<br/>当前诊断:123213123<br/>VS目标值:瞳孔:12/22;";
     private TextView tvLine;
+    private AppCompatCheckedTextView mAppCompatCheckedTextView;
 
     public static void start(Context context) {
         Intent intent = new Intent(context, AndroidTest.class);
@@ -228,6 +228,69 @@ public class AndroidTest extends AppCompatActivity {
         }
 
     }
+    private Handler mHandler;//全局变量
 
+    public void fileTest(View view){
+        startActivity(new Intent(this,FileTest.class));
+
+//            mHandler = new Handler();
+//            new Thread(new Runnable() {
+//                @Override
+//                public void run() {
+//                    try {
+//                        Thread.sleep(1000);//在子线程有一段耗时操作,比如请求网络
+//                        mHandler.post(new Runnable() {
+//                            @Override
+//                            public void run() {
+//                                tvLine.setText("This is post");//更新UI
+//                            }
+//                        });
+//                    } catch (InterruptedException e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//            }).start();
+
+    }
+
+    /**
+     *
+     * 实现功能：
+     *
+     *
+     *
+     * 注意事项：
+     *
+     * 可以通过Map 进行计算有那几个被勾选
+     *
+     * map.put(position,"checked")
+     * map.put(position,"nochecked")
+     * 然后去遍历map取出所需要的值
+     *
+     *
+     * 或者通过  mAppCompatCheckedTextView.isChecked() 来进行判断
+     *
+     *
+     */
+
+
+    public void checkTextView(View view){
+
+        mAppCompatCheckedTextView = (AppCompatCheckedTextView) findViewById(R.id.checkedTextView);
+
+        mAppCompatCheckedTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(AndroidTest.this, "点击", Toast.LENGTH_SHORT).show();
+                if(!mAppCompatCheckedTextView.isChecked()){
+                    mAppCompatCheckedTextView.setChecked(true);
+
+                } else {
+                    mAppCompatCheckedTextView.setChecked(false);
+
+                }
+            }
+        });
+    }
 
 }

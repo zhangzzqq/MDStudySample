@@ -187,6 +187,40 @@
             android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="48dp" />
+
+
+        <Button
+            android:onClick="fileTest"
+            android:text="fileTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <EditText
+            android:text="012345"
+            android:editable="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <EditText
+            android:text="123"
+            android:focusable="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.AppCompatCheckedTextView
+            android:id="@+id/checkedTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center_vertical"
+            android:onClick="checkTextView"
+            android:text="可选择文本"
+            android:textSize="25sp" />
+
+
+
     </LinearLayout>
 
 </ScrollView>

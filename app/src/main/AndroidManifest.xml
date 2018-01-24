@@ -3,6 +3,7 @@
     package="com.example.administrator.mdapplication">
 
     <application
+        android:name=".BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -97,17 +98,29 @@
             android:label="tabFragmentActivity" />
         <activity
             android:name=".activities.Png9Activity"
-            android:label=".9PngActivity" />
+            android:label="9PngActivity" />
         <activity
             android:name=".activities.btnNullTest"
-            android:label=".nullTestActivity" />
+            android:label="nullTestActivity" />
         <activity
             android:name=".activities.EditTestActivity"
-            android:label=".nullTestActivity" />
+            android:label="nullTestActivity" />
         <activity
             android:name=".enumerate.EnumerateActivity"
-            android:label=".enumerateActivity" />
+            android:label="enumerateActivity" />
+        <activity
+            android:name=".threadpool.ThreadPoolTest"
+            android:label="threadPoolStudy" />
 
+        <activity
+            android:name=".activities.FileTest"
+            android:label="fileTest" />
+        <activity
+            android:name=".activities.CustomPropertyStudy"
+            android:label="customPropertyStudy" />
+        <activity
+            android:name=".activities.ImageButtonStudy"
+            android:label="customPropertyStudy" />
 
 
     </application>

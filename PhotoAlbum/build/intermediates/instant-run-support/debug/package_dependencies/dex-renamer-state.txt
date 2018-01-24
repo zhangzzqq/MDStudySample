@@ -1,0 +1,4 @@
+#Sun Jan 21 09:29:08 CST 2018
+base.0=E\:\\androidStudio\\xiangmu\\MDStudySample\\MDStudySample\\PhotoAlbum\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\android-support-v4_3d5e4b73810f1cfc21bd230986ea7cc305453688
+renamed.0=classes.dex
+file.0=E\:\\androidStudio\\xiangmu\\MDStudySample\\MDStudySample\\PhotoAlbum\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\android-support-v4_3d5e4b73810f1cfc21bd230986ea7cc305453688\\classes.dex

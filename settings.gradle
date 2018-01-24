@@ -1,1 +1,1 @@
-include ':app', ':javamodule'
+include ':app', ':javamodule', ':rockerView', ':PieView', ':PhotoAlbum'

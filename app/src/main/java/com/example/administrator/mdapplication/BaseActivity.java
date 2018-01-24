@@ -7,7 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 /**
- * Created by yifeng on 16/8/4.
+ * Created by zq on 16/8/4.
  *
  */
 public class BaseActivity extends AppCompatActivity {

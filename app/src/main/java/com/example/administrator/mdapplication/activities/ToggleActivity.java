@@ -2,7 +2,6 @@ package com.example.administrator.mdapplication.activities;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 
 import com.example.administrator.mdapplication.R;
 
@@ -11,7 +10,7 @@ import com.example.administrator.mdapplication.R;
  * Created by steven on 2017/11/1 0001.
  */
 
-public class ToggleActivity extends AppCompatActivity{
+public class ToggleActivity extends com.example.administrator.mdapplication.BaseActivity{
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

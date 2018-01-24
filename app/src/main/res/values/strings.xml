@@ -84,4 +84,6 @@
         <item quantity='other'>You are many</item>
     </plurals>
 
+    <string name="start_or_pause">开始/暂停</string>
+
 </resources>
