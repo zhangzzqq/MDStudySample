@@ -1,4 +1,0 @@
-#Sun Jan 21 09:29:09 CST 2018
-base.0=E\:\\androidStudio\\xiangmu\\MDStudySample\\MDStudySample\\PhotoAlbum\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_4
-renamed.0=classes.dex
-file.0=E\:\\androidStudio\\xiangmu\\MDStudySample\\MDStudySample\\PhotoAlbum\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_4\\classes.dex

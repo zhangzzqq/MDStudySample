@@ -38,7 +38,7 @@ public class SearchActivity extends AppCompatActivity implements SearchView.OnQu
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_search, menu);
+        getMenuInflater(). inflate(R.menu.menu_search, menu);
         //设置搜索输入框的步骤
         //1.查找指定的MemuItem
         MenuItem menuItem = menu.findItem(R.id.action_search);
@@ -60,7 +60,10 @@ public class SearchActivity extends AppCompatActivity implements SearchView.OnQu
             //可以设置搜索的自动补全，或者实现搜索历史
 //            searchView.setSuggestionsAdapter();
 
+            searchView.setQuery("1111",true);
+
         }
+
         return true;
     }
 

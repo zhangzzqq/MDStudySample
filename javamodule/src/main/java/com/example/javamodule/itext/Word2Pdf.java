@@ -1,213 +1,197 @@
 package com.example.javamodule.itext;
 
-import android.media.Image;
-import android.provider.DocumentsContract;
-import android.support.constraint.solver.widgets.Rectangle;
 
-import java.io.ByteArrayOutputStream;
+import com.jacob.activeX.ActiveXComponent;
+import com.jacob.com.Dispatch;
+import com.jacob.com.Variant;
+import com.lowagie.text.Document;
+import com.lowagie.text.DocumentException;
+import com.lowagie.text.Image;
+import com.lowagie.text.PageSize;
+import com.lowagie.text.pdf.PdfWriter;
+
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.RandomAccessFile;
-import java.nio.ByteBuffer;
-import java.nio.channels.FileChannel;
-import java.util.Map;
-import java.util.TreeMap;
+import java.io.IOException;
 
 /**
  * Created by steven on 2018/1/31.
  */
 
-@SuppressWarnings("unused")
-public class ImgPdfUtils {
-    public static void main(String[] args) throws Exception {
-        //PDF包提取 pdf
-        //pdfExtraction();
+public class Word2Pdf {
 
-        //pdf转jpg
-        //pdfToJpg("E:\\java\\资料pdf\\1.pdf","E:\\java\\资料pdf\\1.jpg",1);
+    static final int wdDoNotSaveChanges = 0;// 不保存待定的更改。
+    static final int wdFormatPDF = 17;// word转PDF 格式
+    static final int ppSaveAsPDF = 32;// ppt 转PDF 格式
 
-        //将多个jpg直接合并成pdf包
-        //extractionPdf("F:\\temp\\Project\\数据\\dfdsfds\\巴黎公社活动家传略_img","F:\\temp\\Project\\数据\\dfdsfds\\巴黎公社活动家传略_img.pdf");
+    public static void main(String[] args) throws IOException {
+        String source1 = "e:\\test.doc";
+        String source2 = "e:\\asd.xlsx";
+        String source3 = "e:\\aa.ppt";
+        String target1 = "e:\\test1.pdf";
+        String target2 = "e:\\test2.pdf";
+        String target3 = "e:\\test3.pdf";
 
-        //jpg转pdf
-        //jpgToPdf();
-
-        //文件排序
-        //listOrder();
-
-        ImgFileTool.imgMerageToPdf(new File("F:\\temp\\Project\\数据\\dfdsfds\\巴黎公社活动家传略_img").listFiles(),new File("F:\\temp\\Project\\数据\\dfdsfds\\","巴黎公社活动家传略.pdf"));
+        Word2Pdf pdf = new Word2Pdf();
+//  pdf.word2pdf(source1, target1);
+//  pdf.excel2pdf(source2, target2);
+//  pdf.ppt2pdf(source3, target3);
+  pdf.imgToPdf("e:/12345.jpg","e:/zq.pdf");
     }
 
-    private static void listOrder() {
+    public void word2pdf(String source,String target){
+        System.out.println("启动Word");
+        long start = System.currentTimeMillis();
+        ActiveXComponent app = null;
+        try {
+            app = new ActiveXComponent("Word.Application");
+            app.setProperty("Visible", false);
 
-        File[] listFiles = new File("F:\\temp\\Project\\数据\\dfdsfds\\巴黎公社活动家传略_img").listFiles();
-        TreeMap<Integer, File> tree = new TreeMap<Integer, File>();
-        for(File f : listFiles)
-        {
-            tree.put(Integer.parseInt(f.getName().replaceAll(".jpg$", "")), f);
+            Dispatch docs = app.getProperty("Documents").toDispatch();
+            System.out.println("打开文档" + source);
+            Dispatch doc = Dispatch.call(docs,//
+                    "Open", //
+                    source,// FileName
+                    false,// ConfirmConversions
+                    true // ReadOnly
+            ).toDispatch();
+
+            System.out.println("转换文档到PDF " + target);
+            File tofile = new File(target);
+            if (tofile.exists()) {
+                tofile.delete();
+            }
+            Dispatch.call(doc,//
+                    "SaveAs", //
+                    target, // FileName
+                    wdFormatPDF);
+
+            Dispatch.call(doc, "Close", false);
+            long end = System.currentTimeMillis();
+            System.out.println("转换完成..用时：" + (end - start) + "ms.");
+        } catch (Exception e) {
+            System.out.println("========Error:文档转换失败：" + e.getMessage());
+        } finally {
+            if (app != null)
+                app.invoke("Quit", wdDoNotSaveChanges);
         }
-        for(Map.Entry<Integer, File> eif : tree.entrySet())
-        {
-            System.out.println(eif.getKey()+"="+eif.getValue().toString());
+    }
+
+    public void ppt2pdf(String source,String target){
+        System.out.println("启动PPT");
+        long start = System.currentTimeMillis();
+        ActiveXComponent app = null;
+        try {
+            app = new ActiveXComponent("Powerpoint.Application");
+            Dispatch presentations = app.getProperty("Presentations").toDispatch();
+            System.out.println("打开文档" + source);
+            Dispatch presentation = Dispatch.call(presentations,//
+                    "Open",
+                    source,// FileName
+                    true,// ReadOnly
+                    true,// Untitled 指定文件是否有标题。
+                    false // WithWindow 指定文件是否可见。
+            ).toDispatch();
+
+            System.out.println("转换文档到PDF " + target);
+            File tofile = new File(target);
+            if (tofile.exists()) {
+                tofile.delete();
+            }
+            Dispatch.call(presentation,//
+                    "SaveAs", //
+                    target, // FileName
+                    ppSaveAsPDF);
+
+            Dispatch.call(presentation, "Close");
+            long end = System.currentTimeMillis();
+            System.out.println("转换完成..用时：" + (end - start) + "ms.");
+        } catch (Exception e) {
+            System.out.println("========Error:文档转换失败：" + e.getMessage());
+        } finally {
+            if (app != null) app.invoke("Quit");
         }
     }
-    /**
-     * @param list  图片集合
-     * @param file 保存路径
-     * @return  true,合并完成
-     *      如果文件名不是1.jpg，2.jpg，3.jpg，4.jpg这样的。则需要自己重写TreeMap的排序方式！
-     */
-    public static boolean imgMerageToPdf(File[] list, File file)throws Exception {
-        //1：对图片文件通过TreeMap以名称进行自然排序
-        Map<Integer,File> mif = new TreeMap<Integer,File>();
-        for(File f : list)
-            mif.put(Integer.parseInt(f.getName().replaceAll(".jpg$", "")), f);
 
-        //2：获取第一个Img的宽、高做为PDF文档标准
-        ByteArrayOutputStream baos = new ByteArrayOutputStream(2048*3);
-        InputStream is = new FileInputStream(mif.get(1));
-        for(int len;(len=is.read())!=-1;)
-            baos.write(len);
-
-        baos.flush();
-        Image image = Image.getInstance(baos.toByteArray());
-        float width = image.width();
-        float height = image.height();
-        baos.close();
-
-        //3:通过宽高 ，实例化PDF文档对象。
-        DocumentsContract.Document document = new DocumentsContract.Document(new Rectangle(width,height));
-        PdfWriter pdfWr = PdfWriter.getInstance(document, new FileOutputStream(file));
-        document.open();
-
-        //4：获取每一个图片文件，转为IMG对象。装载到Document对象中
-        for(Map.Entry<Integer,File> eif : mif.entrySet())
-        {
-            //4.1:读取到内存中
-            baos = new ByteArrayOutputStream(2048*3);
-            is = new FileInputStream(eif.getValue());
-            for(int len;(len=is.read())!=-1;)
-                baos.write(len);
-            baos.flush();
-
-            //4.2通过byte字节生成IMG对象
-            image = Image.getInstance(baos.toByteArray());
-            Image.getInstance(baos.toByteArray());
-            image.setAbsolutePosition(0.0f, 0.0f);
-
-            //4.3：添加到document中
-            document.add(image);
-            document.newPage();
-            baos.close();
+    public void excel2pdf(String source, String target) {
+        System.out.println("启动Excel");
+        long start = System.currentTimeMillis();
+        ActiveXComponent app = new ActiveXComponent("Excel.Application"); // 启动excel(Excel.Application)
+        try {
+            app.setProperty("Visible", false);
+            Dispatch workbooks = app.getProperty("Workbooks").toDispatch();
+            System.out.println("打开文档" + source);
+            Dispatch workbook = Dispatch.invoke(workbooks, "Open", Dispatch.Method, new Object[]{source, new Variant(false),new Variant(false)}, new int[3]).toDispatch();
+            Dispatch.invoke(workbook, "SaveAs", Dispatch.Method, new Object[] {
+                    target, new Variant(57), new Variant(false),
+                    new Variant(57), new Variant(57), new Variant(false),
+                    new Variant(true), new Variant(57), new Variant(true),
+                    new Variant(true), new Variant(true) }, new int[1]);
+            Variant f = new Variant(false);
+            System.out.println("转换文档到PDF " + target);
+            Dispatch.call(workbook, "Close", f);
+            long end = System.currentTimeMillis();
+            System.out.println("转换完成..用时：" + (end - start) + "ms.");
+        } catch (Exception e) {
+            System.out.println("========Error:文档转换失败：" + e.getMessage());
+        }finally {
+            if (app != null){
+                app.invoke("Quit", new Variant[] {});
+            }
         }
-
-        //5：释放资源
-        document.close();
-        pdfWr.close();
-
-        return true;
     }
-    /**
-     *
-     * @param source 源文件
-     * @param target 目标文件
-     * @param x 读取源文件中的第几页
-     */
-    private static void pdfToJpg(String source,String target,int x) throws Exception {
-        //创建从中读取和向其中写入（可选）的随机访问文件流，R表示对其只是访问模式
-        RandomAccessFile rea = new RandomAccessFile(new File(source), "r");
 
-        //将流读取到内存中，然后还映射一个PDF对象
-        FileChannel channel = rea.getChannel();
-        ByteBuffer buf = channel.map(FileChannel.MapMode.READ_ONLY,0, channel.size());
-        PDFFile pdfFile = new PDFFile(buf);
-        PDFPage page = pdfFile.getPage(x);
 
-        // get the width and height for the doc at the default zoom
-        java.awt.Rectangle rect = new java.awt.Rectangle(0, 0, (int) page.getBBox()
-                .getWidth(), (int) page.getBBox().getHeight());
 
-        // generate the image
-        java.awt.Image img = page.getImage(rect.width, rect.height, // width &
-                rect, // clip rect
-                null, // null for the ImageObserver
-                true, // fill background with white
-                true // block until drawing is done
-        );
+    public boolean imgToPdf(String imgFilePath, String pdfFilePath)throws IOException {
+        File file=new File(imgFilePath);
+        if(file.exists()){
+            Document document = new Document();
+            FileOutputStream fos = null;
+            try {
+                fos = new FileOutputStream(pdfFilePath);
+                PdfWriter.getInstance(document, fos);
 
-        BufferedImage tag = new BufferedImage(rect.width, rect.height,
-                BufferedImage.TYPE_INT_RGB);
+                // 添加PDF文档的某些信息，比如作者，主题等等
+                document.addAuthor("arui");
+                document.addSubject("test pdf.");
+                // 设置文档的大小
+                document.setPageSize(PageSize.A4);
+                // 打开文档
+                document.open();
+                // 写入一段文字
+                //document.add(new Paragraph("JUST TEST ..."));
+                // 读取一个图片
+                Image image = Image.getInstance(imgFilePath);
+                float imageHeight=image.getScaledHeight();
+                float imageWidth=image.getScaledWidth();
+                int i=0;
+                while(imageHeight>500||imageWidth>500){
+                    image.scalePercent(100-i);
+                    i++;
+                    imageHeight=image.getScaledHeight();
+                    imageWidth=image.getScaledWidth();
+                    System.out.println("imageHeight->"+imageHeight);
+                    System.out.println("imageWidth->"+imageWidth);
+                }
 
-        tag.getGraphics().drawImage(img, 0, 0, rect.width, rect.height,
-                null);
-        FileOutputStream out = new FileOutputStream(target); // 输出到文件流
-        JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(out);
-        encoder.encode(tag); // JPEG编码
-        out.close();
-    }
-    /**
-     * @param source  源PDF文件路径
-     * @param target  保存PDF文件路径
-     * @param pageNum  提取PDF中第pageNum页
-     * @throws Exception
-     */
-    private static void pdfExtraction(String source,String target,int pageNum) throws Exception{
-        //1：创建PDF读取对象
-        PdfReader pr = new PdfReader(source);
-        System.out.println("this document "+pr.getNumberOfPages()+" page");
-
-        //2：将第page页转为提取，创建document对象
-        Document doc = new Document(pr.getPageSize(pageNum));
-
-        //3：通过PdfCopy转其单独存储
-        PdfCopy copy = new PdfCopy(doc, new FileOutputStream(new File(target)));
-        doc.open();
-        doc.newPage();
-
-        //4：获取第1页，装载到document中。
-        PdfImportedPage page = copy.getImportedPage(pr,pageNum);
-        copy.addPage(page);
-
-        //5：释放资源
-        copy.close();
-        doc.close();
-        pr.close();
-    }
-    /**
-     * @param pdfFile 源PDF文件
-     * @param imgFile   图片文件
-     */
-    private static void jpgToPdf(File pdfFile,File imgFile)  throws Exception {
-        //文件转img
-        InputStream is = new FileInputStream(pdfFile);
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        for(int i;(i=is.read())!=-1;)
-        {
-            baos.write(i);
+                image.setAlignment(Image.ALIGN_CENTER);
+//        //设置图片的绝对位置
+                // image.setAbsolutePosition(0, 0);
+                // image.scaleAbsolute(500, 400);
+                // 插入一个图片
+                document.add(image);
+            } catch (DocumentException de) {
+                System.out.println(de.getMessage());
+            } catch (IOException ioe) {
+                System.out.println(ioe.getMessage());
+            }
+            document.close();
+            fos.flush();
+            fos.close();
+            return true;
+        }else{
+            return false;
         }
-        baos.flush();
-
-        //取得图像的宽和高。
-        Image img = Image.getInstance(baos.toByteArray());
-        float width = img.width();
-        float height = img.height();
-        img.setAbsolutePosition(0.0F, 0.0F);//取消偏移
-        System.out.println("width = "+width+"\theight"+height);
-
-        //img转pdf
-        Document doc = new Document(new Rectangle(width,height));
-        PdfWriter pw = PdfWriter.getInstance(doc,new FileOutputStream(imgFile));
-        doc.open();
-        doc.add(img);
-
-        //释放资源
-        System.out.println(doc.newPage());
-        pw.flush();
-        baos.close();
-        doc.close();
-        pw.close();
     }
-
 }

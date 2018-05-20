@@ -1,4 +1,4 @@
-package com.example.administrator.mdapplication.activities;
+package com.example.administrator.mdapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,11 +8,23 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.example.administrator.mdapplication.R;
-import com.example.administrator.mdapplication.SwitchStudy;
-import com.example.administrator.mdapplication.TextInputActivity;
-import com.example.administrator.mdapplication.TextInputLayoutStudy;
+import com.example.administrator.mdapplication.activities.AndroidTest;
+import com.example.administrator.mdapplication.activities.AppBarLayoutActivity;
+import com.example.administrator.mdapplication.activities.BehaviorDependentActivity;
+import com.example.administrator.mdapplication.activities.BehaviorNestedActivity;
+import com.example.administrator.mdapplication.activities.BehaviorNestedExpandActivity;
+import com.example.administrator.mdapplication.activities.BottomNavigationActivity;
+import com.example.administrator.mdapplication.activities.CheckedTextViewStudy;
+import com.example.administrator.mdapplication.activities.CustomPropertyStudy;
+import com.example.administrator.mdapplication.activities.FloatActionBarActivity;
+import com.example.administrator.mdapplication.activities.FragmentStudyTest;
+import com.example.administrator.mdapplication.activities.ImageButtonStudy;
+import com.example.administrator.mdapplication.activities.NestedScrollingActivity;
+import com.example.administrator.mdapplication.activities.SearchResultActivity;
+import com.example.administrator.mdapplication.activities.SpinnerStudy;
+import com.example.administrator.mdapplication.activities.TabFragmentActivityTest;
 import com.example.administrator.mdapplication.adapter.DataListAdapter;
+import com.example.administrator.mdapplication.constraintLayout.ConstraintLayoutActivity;
 import com.example.administrator.mdapplication.enumerate.EnumerateActivity;
 import com.example.administrator.mdapplication.snackbar.SnackbarActivity;
 import com.example.administrator.mdapplication.tablayout.TabLayoutBottomActivity;
@@ -144,6 +156,9 @@ public class MainActivity extends AppCompatActivity {
                     case 23:
                         startActivity(new Intent(MainActivity.this, ImageButtonStudy.class));
                         break;
+                        case 24:
+                        startActivity(new Intent(MainActivity.this, ConstraintLayoutActivity.class));
+                        break;
                 }
             }
         });
@@ -175,6 +190,7 @@ public class MainActivity extends AppCompatActivity {
         list.add("threadPoolTest");
         list.add("customPropertyStudy");
         list.add("imageButtonStudy");
+        list.add("constraintLayoutActivity");
 
         return list;
 

@@ -14,6 +14,8 @@ public class BaseApplication extends Application {
     public void onCreate() {
         super.onCreate();
         this.context = getApplicationContext();
+
+//        MainActivity22.aa;
     }
     public static Context getContext(){
         return context;

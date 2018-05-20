@@ -3,7 +3,7 @@ package com.example.moduletest;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+public class moduleTestActivity extends AppCompatActivity {
 
     public static int aa=12;
     @Override

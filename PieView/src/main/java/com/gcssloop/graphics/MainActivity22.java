@@ -27,8 +27,9 @@ import com.gcssloop.view.pieview.PieView;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity22 extends AppCompatActivity {
 
+    public static int aa =11;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
