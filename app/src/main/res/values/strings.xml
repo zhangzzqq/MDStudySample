@@ -86,4 +86,16 @@
 
     <string name="start_or_pause">开始/暂停</string>
 
+    <!--传输外线-->
+    <string name="transmissionline_structwell">人手井</string>
+    <string name="transmissionline_structpole">电杆</string>
+    <string name="transmissionline_structstone">标石</string>
+    <string name="transmissionline_tranbox">光交接箱</string>
+    <string name="transo_supportpoint">撑点</string>
+    <string name="transo_jointbox">光接头盒</string>
+    <string name="transo_terminalbox">光终端盒</string>
+    <string name="wiredaccess_fiberbox">光分纤箱</string>
+
+
+
 </resources>

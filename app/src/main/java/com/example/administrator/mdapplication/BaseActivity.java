@@ -4,10 +4,8 @@ import android.content.Context;
 import android.support.annotation.LayoutRes;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.MenuItem;
 
-import com.example.moduletest.moduleTestActivity;
 
 /**
  * Created by zq on 16/8/4.
@@ -29,12 +27,6 @@ public class BaseActivity extends AppCompatActivity {
             getSupportActionBar().setHomeButtonEnabled(true);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
-
-        String a = moduleTestActivity.getValue();
-
-        Log.e(BaseActivity.this.getLocalClassName(), a);
-
-
     }
 
     @Override

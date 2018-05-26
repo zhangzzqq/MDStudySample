@@ -31,10 +31,10 @@ public class javaTest {
 //        System.out.println(WeekEnum.FRIDAY.toString());
 
         //=======================================
-        String strResult = QueryType.BACKWARD.toString();
-        int value = QueryType.BACKWARD.getValue();
-        System.out.println("strResult==" + strResult);
-        System.out.println(value);
+//        String strResult = QueryType.BACKWARD.toString();
+//        int value = QueryType.BACKWARD.getValue();
+//        System.out.println("strResult==" + strResult);
+//        System.out.println(value);
 
     }
 

@@ -125,6 +125,10 @@
             android:name=".constraintLayout.ConstraintLayoutActivity"
             android:label="constraintLayoutActivity" />
 
+        <activity android:name=".gridlayoutstudy.GridLayoutStudy"
+            android:label="GridLayoutStudy"
+            />
+
 
     </application>
 

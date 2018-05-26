@@ -26,6 +26,7 @@ import com.example.administrator.mdapplication.activities.TabFragmentActivityTes
 import com.example.administrator.mdapplication.adapter.DataListAdapter;
 import com.example.administrator.mdapplication.constraintLayout.ConstraintLayoutActivity;
 import com.example.administrator.mdapplication.enumerate.EnumerateActivity;
+import com.example.administrator.mdapplication.gridlayoutstudy.GridLayoutStudy;
 import com.example.administrator.mdapplication.snackbar.SnackbarActivity;
 import com.example.administrator.mdapplication.tablayout.TabLayoutBottomActivity;
 import com.example.administrator.mdapplication.tablayout.TabLayoutTopActivity;
@@ -156,8 +157,11 @@ public class MainActivity extends AppCompatActivity {
                     case 23:
                         startActivity(new Intent(MainActivity.this, ImageButtonStudy.class));
                         break;
-                        case 24:
+                    case 24:
                         startActivity(new Intent(MainActivity.this, ConstraintLayoutActivity.class));
+                        break;
+                        case 25:
+                        startActivity(new Intent(MainActivity.this, GridLayoutStudy.class));
                         break;
                 }
             }
@@ -191,6 +195,7 @@ public class MainActivity extends AppCompatActivity {
         list.add("customPropertyStudy");
         list.add("imageButtonStudy");
         list.add("constraintLayoutActivity");
+        list.add("gridLayoutStudy");
 
         return list;
 

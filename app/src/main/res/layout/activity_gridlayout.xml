@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+
+    <GridLayout
+        android:id="@+id/grid_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:orientation="horizontal"
+        android:rowCount="1">
+
+        <CheckBox
+            android:id="@+id/structwell"
+            style="@style/outButton"
+            android:text="@string/transmissionline_structwell"
+            />
+        <CheckBox
+            android:id="@+id/structpole"
+            style="@style/outButton"
+            android:text="@string/transmissionline_structpole"
+            />
+        <CheckBox
+            android:id="@+id/structstone"
+            style="@style/outButton"
+            android:text="@string/transmissionline_structstone"
+            />
+        <CheckBox
+            android:id="@+id/supportpoint"
+            style="@style/outButton"
+            android:text="@string/transo_supportpoint"
+            />
+        <CheckBox
+            android:id="@+id/tranbox"
+            style="@style/outButton"
+            android:text="@string/transmissionline_tranbox"
+            />
+        <CheckBox
+            android:id="@+id/fiberbox"
+            style="@style/outButton"
+            android:text="@string/wiredaccess_fiberbox"
+            />
+    </GridLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="click"
+            android:onClick="btnclick"
+
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

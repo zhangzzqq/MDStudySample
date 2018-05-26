@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginTop="16dp"
+    android:columnCount="4"
+    android:orientation="horizontal"
+    android:rowCount="6">
+
+    <TextView
+        android:id="@+id/tv_show"
+        android:layout_columnSpan="4"
+        android:layout_gravity="fill"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="8dp"
+        android:background="#EEEEE0"
+        android:paddingLeft="8dp"
+        android:text="0"
+        android:textSize="50sp" />
+
+
+    <Button
+        android:id="@+id/btn_back"
+        android:text="返回" />
+
+    <Button
+        android:id="@+id/btn_del"
+        android:text="清空" />
+
+    <Button
+        android:id="@+id/btn_divide"
+        android:text="/" />
+
+    <Button
+        android:id="@+id/btn_ride"
+        android:text="X" />
+
+    <Button
+        android:id="@+id/btn_cal_7"
+        android:text="7" />
+
+    <Button
+        android:id="@+id/btn_cal_8"
+        android:text="8" />
+
+    <Button
+        android:id="@+id/btn_cal_9"
+        android:text="9" />
+
+    <Button
+        android:id="@+id/btn_reduce"
+        android:text="-" />
+
+    <Button
+        android:id="@+id/btn_cal_4"
+        android:text="4" />
+
+    <Button
+        android:id="@+id/btn_cal_5"
+        android:text="5" />
+
+    <Button
+        android:id="@+id/btn_cal_6"
+        android:text="6" />
+
+    <Button
+        android:id="@+id/btn_plus"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/btn_cal_1"
+        android:text="1" />
+
+    <Button
+        android:id="@+id/btn_cal_2"
+        android:text="2" />
+
+    <Button
+        android:id="@+id/btn_cal_3"
+        android:text="3" />
+
+    <Button
+        android:id="@+id/btn_spot"
+        android:text="." />
+
+    <Button
+        android:id="@+id/btn_cal_0"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill"
+        android:text="0" />
+
+    <Button
+        android:id="@+id/btn_equal"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill"
+        android:text="=" />
+
+
+</GridLayout>
+
