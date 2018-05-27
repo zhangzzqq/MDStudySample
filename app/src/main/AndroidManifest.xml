@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.administrator.mdapplication">
+    package="com.zq.administrator.mdapplication">
 
     <application
         android:name=".BaseApplication"
@@ -71,7 +71,7 @@
             android:name=".SwitchStudy"
             android:label="SwitchStudy" />
         <activity
-            android:name=".activities.CheckedTextViewStudy"
+            android:name="com.example.administrator.myapplication.checkview.CheckedTextViewStudy"
             android:label="CheckedTextView" />
         <activity
             android:name=".TextInputLayoutStudy"

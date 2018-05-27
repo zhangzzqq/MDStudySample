@@ -1,4 +1,4 @@
-package com.example.photoalbum;
+package com.zq.photoalbum;
 
 import android.app.Activity;
 import android.content.Intent;

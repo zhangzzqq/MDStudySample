@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.example.photoalbum.test;
+package com.zq.photoalbum.test;
 
 public final class R {
 }

@@ -1,15 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    android:id="@+id/ll_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants"
+    >
 
-    <CheckedTextView
-        android:id="@+id/list_row_ctv"
+    <LinearLayout
+        android:layout_margin="12dp"
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+        android:clickable="false"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
-        android:gravity="center_horizontal"
-        android:text="CheckedTextView" />
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <CheckedTextView
+            android:id="@+id/list_row_ctv"
+            android:focusableInTouchMode="false"
+            android:focusable="false"
+            android:clickable="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checkMarkTint="@color/blue_600"
+            android:checkMark="?android:attr/listChoiceIndicatorSingle"
+            android:gravity="center_horizontal"
+            android:drawingCacheQuality="high"
+            android:text="CheckedTextView" />
+
+
+
+
+
+
+    </LinearLayout>
+
+
 
 </LinearLayout>

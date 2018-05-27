@@ -12,5 +12,5 @@
                      android:targetPackage="com.example.photoalbum"
                      android:handleProfiling="false"
                      android:functionalTest="false"
-                     android:label="Tests for com.example.photoalbum"/>
+                     android:label="Tests for com.zq.photoalbum"/>
 </manifest>

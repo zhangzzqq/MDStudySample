@@ -1,4 +1,4 @@
-package com.example.javamodule;
+package com.zq.javamodule;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

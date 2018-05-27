@@ -1,4 +1,4 @@
-package com.example.javamodule;
+package com.zq.javamodule;
 
 import org.junit.Test;
 
