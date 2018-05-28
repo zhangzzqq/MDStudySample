@@ -3,14 +3,14 @@
     package="com.zq.administrator.mdapplication">
 
     <application
-        android:name=".BaseApplication"
+        android:name="com.zq.administrator.myapplication.BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.zq.administrator.myapplication.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,113 +19,113 @@
         </activity>
 
         <activity
-            android:name=".toolbar.SearchActivity"
+            android:name="com.zq.administrator.myapplication.toolbar.SearchActivity"
             android:label="SearchSamples" />
         <activity
-            android:name=".toolbar.ToolBarActivity"
+            android:name="com.zq.administrator.myapplication.toolbar.ToolBarActivity"
             android:label="ToolBarSamples" />
         <activity
-            android:name=".tablayout.TabLayoutTopActivity"
+            android:name="com.zq.administrator.myapplication.tablayout.TabLayoutTopActivity"
 
             android:label="TabLayoutTopSamples" />
         <activity
-            android:name=".tablayout.TabLayoutBottomActivity"
+            android:name="com.zq.administrator.myapplication.tablayout.TabLayoutBottomActivity"
             android:label="TabLayoutBottomSamples" />
         <activity
-            android:name=".snackbar.SnackbarActivity"
+            android:name="com.zq.administrator.myapplication.snackbar.SnackbarActivity"
             android:label="SnackbarSamples" />
         <activity
-            android:name=".activities.PaletteDetailActivity"
+            android:name="com.zq.administrator.myapplication.activities.PaletteDetailActivity"
             android:label="PaletteDetailSamples" />
         <activity
-            android:name=".activities.FloatActionBarActivity"
+            android:name="com.zq.administrator.myapplication.activities.FloatActionBarActivity"
             android:label="FloatActionBarSamples" />
         <activity
-            android:name=".activities.AppBarLayoutActivity"
+            android:name="com.zq.administrator.myapplication.activities.AppBarLayoutActivity"
             android:label="AppBarLayout" />
         <activity
-            android:name=".activities.BehaviorDependentActivity"
+            android:name="com.zq.administrator.myapplication.activities.BehaviorDependentActivity"
             android:label="BehaviorDependent" />
         <activity
-            android:name=".activities.BehaviorNestedActivity"
+            android:name="com.zq.administrator.myapplication.activities.BehaviorNestedActivity"
             android:label="BehaviorNested" />
         <activity
-            android:name=".activities.BehaviorNestedExpandActivity"
+            android:name="com.zq.administrator.myapplication.activities.BehaviorNestedExpandActivity"
 
             android:label="BehaviorNestedExpand" />
         <activity
-            android:name=".activities.SearchResultActivity"
+            android:name="com.zq.administrator.myapplication.activities.SearchResultActivity"
             android:label="SearchResult" />
         <activity
-            android:name=".TextInputActivity"
+            android:name="com.zq.administrator.myapplication.TextInputActivity"
             android:label="TextInput" />
         <activity
-            android:name=".activities.BottomNavigationActivity"
+            android:name="com.zq.administrator.myapplication.activities.BottomNavigationActivity"
             android:label="BottomNavigation" />
         <activity
-            android:name=".activities.SpinnerStudy"
+            android:name="com.zq.administrator.myapplication.activities.SpinnerStudy"
             android:label="SpinnerStudy"
 
             />
         <activity
-            android:name=".SwitchStudy"
+            android:name="com.zq.administrator.myapplication.SwitchStudy"
             android:label="SwitchStudy" />
         <activity
-            android:name="com.example.administrator.myapplication.checkview.CheckedTextViewStudy"
+            android:name="com.zq.administrator.myapplication.checkview.CheckedTextViewStudy"
             android:label="CheckedTextView" />
         <activity
             android:name=".TextInputLayoutStudy"
             android:label="TextInputLayoutStudy" />
 
         <activity
-            android:name=".activities.NestedScrollingActivity"
+            android:name="com.zq.administrator.myapplication.activities.NestedScrollingActivity"
             android:label="ScrollingActivity" />
 
-        <activity android:name=".activities.RecyclerViewTest" />
-        <activity android:name=".activities.ToggleActivity" />
-        <activity android:name=".activities.AlertDialogTest" />
+        <activity android:name="com.zq.administrator.myapplication.activities.RecyclerViewTest" />
+        <activity android:name="com.zq.administrator.myapplication.activities.ToggleActivity" />
+        <activity android:name="com.zq.administrator.myapplication.activities.AlertDialogTest" />
         <activity
-            android:name=".activities.WindowSoftInputTest"
+            android:name="com.zq.administrator.myapplication.activities.WindowSoftInputTest"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
-            android:name=".activities.AndroidTest"
+            android:name="com.zq.administrator.myapplication.activities.AndroidTest"
             android:label="AndroidTest" />
         <activity
-            android:name=".activities.FragmentStudyTest"
+            android:name="com.zq.administrator.myapplication.activities.FragmentStudyTest"
             android:label="FragmentStudy" />
         <activity
-            android:name=".activities.TabFragmentActivityTest"
+            android:name="com.zq.administrator.myapplication.activities.TabFragmentActivityTest"
             android:label="tabFragmentActivity" />
         <activity
-            android:name=".activities.Png9Activity"
+            android:name="com.zq.administrator.myapplication.activities.Png9Activity"
             android:label="9PngActivity" />
         <activity
             android:name=".activities.btnNullTest"
             android:label="nullTestActivity" />
         <activity
-            android:name=".activities.EditTestActivity"
+            android:name="com.zq.administrator.myapplication.activities.EditTestActivity"
             android:label="nullTestActivity" />
         <activity
-            android:name=".enumerate.EnumerateActivity"
+            android:name="com.zq.administrator.myapplication.enumerate.EnumerateActivity"
             android:label="enumerateActivity" />
         <activity
-            android:name=".threadpool.ThreadPoolTest"
+            android:name="com.zq.administrator.myapplication.threadpool.ThreadPoolTest"
             android:label="threadPoolStudy" />
 
         <activity
-            android:name=".activities.FileTest"
+            android:name="com.zq.administrator.myapplication.activities.FileTest"
             android:label="fileTest" />
         <activity
-            android:name=".activities.CustomPropertyStudy"
+            android:name="com.zq.administrator.myapplication.activities.CustomPropertyStudy"
             android:label="customPropertyStudy" />
         <activity
-            android:name=".activities.ImageButtonStudy"
+            android:name="com.zq.administrator.myapplication.activities.ImageButtonStudy"
             android:label="customPropertyStudy" />
         <activity
-            android:name=".constraintLayout.ConstraintLayoutActivity"
+            android:name="com.zq.administrator.myapplication.constraintLayout.ConstraintLayoutActivity"
             android:label="constraintLayoutActivity" />
 
-        <activity android:name=".gridlayoutstudy.GridLayoutStudy"
+        <activity android:name="com.zq.administrator.myapplication.gridlayoutstudy.GridLayoutStudy"
             android:label="GridLayoutStudy"
             />
 

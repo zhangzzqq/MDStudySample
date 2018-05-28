@@ -9,7 +9,22 @@
         <!--改变toolbar中最右边三个点的颜色-->
         <item name="android:textColorSecondary">#ffffff</item>
         <item name="toolbarStyle">@style/Widget.AppCompat.Toolbar</item>
+        <item name="android:windowNoTitle">true</item>
     </style>
+
+
+    <style name="AppTheme2" parent="Theme.AppCompat.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--改变toolbar中最右边三个点的颜色-->
+        <item name="android:textColorSecondary">#ffffff</item>
+        <item name="toolbarStyle">@style/Widget.AppCompat.Toolbar</item>
+    </style>
+
+
 
 
     <style name="OverFlowMenuTheme" parent="Theme.AppCompat.NoActionBar">
