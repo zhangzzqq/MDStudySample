@@ -13,12 +13,6 @@ public class Test {
 
 
     private void test2(){
-<<<<<<< HEAD
-=======
-
->>>>>>> cdb07e59fdf0ee02fd6022643ebf1781d840434c
-
-    }
 
     }
 

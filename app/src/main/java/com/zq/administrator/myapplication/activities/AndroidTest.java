@@ -179,13 +179,10 @@ public class AndroidTest extends AppCompatActivity {
     public void windowSoftInputTest(View view) {
 
         WindowSoftInputTest.start(view.getContext());
-
     }
 
     public void btn9png(View view) {
-
         startActivity(new Intent(AndroidTest.this, Png9Activity.class));
-
     }
 
     public void btnNullTest(View view) {

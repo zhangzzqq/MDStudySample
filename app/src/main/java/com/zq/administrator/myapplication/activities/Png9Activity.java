@@ -17,7 +17,12 @@ import com.zq.administrator.myapplication.BaseActivity;
  * 右下 内容区域
  * <p>
  * 在下边框和有边框表示内容被显示的区域，show content中可以看出来
- * 上边框和做边框表示可以拉伸的区域  Show patches
+ * 上边框和左边框表示可以拉伸的区域  Show patches
+ *
+ *
+ * .9图可以防止图片拉伸变形
+ *
+ *
  */
 
 public class Png9Activity extends BaseActivity {
