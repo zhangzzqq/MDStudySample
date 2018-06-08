@@ -7,13 +7,18 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.zq.administrator.mdapplication.R;
-import com.zq.administrator.myapplication.utils.DialogUtils;
+import com.zq.administrator.myapplication.utils.AppManager;
 
 
 /**
  * Created by zq on 16/8/4.
+ *
+ * 最后需要MainActivity（主页面、主类）或者Service中处理Dialog的显示问题，
+ * 通过AppManager获取到当前栈顶的Activity，用于构造Dialog就行了。
+
+ Dialog myDialog = new Dialog(AppManager.getAppManager().currentActivity(), R.style.dialog_style);
  */
-public class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity {
 
     public Context mContext;
     public Toolbar mToolbarTb;
@@ -31,7 +36,12 @@ public class BaseActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
-        DialogUtils.insertDialog("标题","明天早上9:00开早会",this);
+//        DialogUtils.insertDialog("标题","明天早上9:00开早会",this);
+
+        //将Activity实例添加到AppManager的堆栈
+        AppManager.getAppManager().addActivity(this);
+
+
     }
 
     @Override
@@ -52,4 +62,13 @@ public class BaseActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        //将Activity实例从AppManager的堆栈中移除
+        AppManager.getAppManager().finishActivity(this);
+
+
+    }
 }
