@@ -21,6 +21,7 @@ public class EaseTitleBar extends RelativeLayout {
     protected RelativeLayout leftLayout;
     protected ImageView leftImage;
     protected TextView leftText;
+    protected TextView rightText;
     // 新增的阅后即焚开关按钮
     protected RelativeLayout fireLayout;
     protected ImageView fireImage;
@@ -28,6 +29,7 @@ public class EaseTitleBar extends RelativeLayout {
     protected ImageView rightImage;
     protected TextView titleView;
     protected RelativeLayout titleLayout;
+
 
     public EaseTitleBar(Context context, AttributeSet attrs, int defStyle) {
         this(context, attrs);
@@ -48,6 +50,7 @@ public class EaseTitleBar extends RelativeLayout {
         leftLayout = (RelativeLayout) findViewById(R.id.left_layout);
         leftImage = (ImageView) findViewById(R.id.left_image);
         leftText = (TextView) findViewById(R.id.left_text);
+        rightText = (TextView) findViewById(R.id.right_title);
         fireLayout = (RelativeLayout) findViewById(R.id.fire_layout);
         fireImage = (ImageView) findViewById(R.id.fire_image);
         rightLayout = (RelativeLayout) findViewById(R.id.right_layout);

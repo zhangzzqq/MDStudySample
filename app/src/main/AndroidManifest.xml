@@ -102,7 +102,7 @@
             android:name="com.zq.administrator.myapplication.activities.Png9Activity"
             android:label="9PngActivity" />
         <activity
-            android:name=".activities.btnNullTest"
+            android:name="com.zq.administrator.myapplication.activities.BtnNullTest"
             android:label="nullTestActivity" />
         <activity
             android:name="com.zq.administrator.myapplication.activities.EditTestActivity"
@@ -129,6 +129,10 @@
 
         <activity android:name="com.zq.administrator.myapplication.gridlayoutstudy.GridLayoutStudy"
             android:label="GridLayoutStudy"
+            />
+
+        <activity android:name="com.zq.administrator.myapplication.dialog.DialogStudy"
+            android:label="DialogStudy"
             />
 
 

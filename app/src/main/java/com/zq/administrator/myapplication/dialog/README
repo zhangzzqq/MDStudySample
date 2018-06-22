@@ -1,0 +1,22 @@
+
+自定义Dialog
+LoadingDialog 是自定义的类，用法在DialogStudy中已经写了，showLoadingDialog()或者带参数
+ dissLoadingDialog()，非常值得推荐，就多了一个类和布局文件
+
+全局Dialog
+
+非要指定当前的上下文
+
+
+v7和app AlertDialog
+
+v7的dialog比较好看（推荐使用）
+
+
+build.show()和build。create().show()
+
+一般情况下两者的效果是一样的，但是如果是自定义dialog需要build.create().show();
+
+
+
+

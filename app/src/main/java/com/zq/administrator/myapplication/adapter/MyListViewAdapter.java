@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckedTextView;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.zq.administrator.mdapplication.R;
 
@@ -17,6 +16,10 @@ import java.util.List;
 
 /**
  * Created by steven on 2017/11/4 0004.
+ *
+ *
+ *  clickFlag 通过这个变量记住那个item被点击，
+ *  在通知listview重新加载布局，对其他item进行处理（有被选中的让它不选中）
  */
 
 public class MyListViewAdapter extends BaseAdapter {
@@ -84,12 +87,12 @@ public class MyListViewAdapter extends BaseAdapter {
             }
         }
 
-        viewHolder.linearLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context, "linearLayout被点击", Toast.LENGTH_SHORT).show();
-            }
-        });
+//        viewHolder.linearLayout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(context, "linearLayout被点击", Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
 
         viewHolder.checkedTextView.setOnClickListener(new View.OnClickListener() {

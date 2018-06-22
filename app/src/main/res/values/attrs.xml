@@ -17,8 +17,8 @@
 
 
     <!--<declare-styleable name="test">-->
-        <!--<attr name="text" format="string" />-->
-        <!--<attr name="testAttr" format="integer" />-->
+    <!--<attr name="text" format="string" />-->
+    <!--<attr name="testAttr" format="integer" />-->
     <!--</declare-styleable>-->
 
 
@@ -29,11 +29,25 @@
 
 
     <declare-styleable name="EaseTitleBar">
-        <attr name="titleBarTitle" format="string"/>
-        <attr name="titleBarLeftImage" format="reference"/>
-        <attr name="titleBarRightImage" format="reference"/>
-        <attr name="titleBarBackground" format="reference|color"/>
+        <attr name="titleBarTitle" format="string" />
+        <attr name="titleBarLeftImage" format="reference" />
+        <attr name="titleBarRightImage" format="reference" />
+        <attr name="titleBarBackground" format="reference|color" />
     </declare-styleable>
+
+    <style name="Request_Dialog" parent="@style/Theme.AppCompat.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="AlertDialogCustom" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">#FFFFFF</item>
+    </style>
 
 
 </resources>

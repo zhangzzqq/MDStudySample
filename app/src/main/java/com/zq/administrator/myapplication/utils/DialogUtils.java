@@ -15,47 +15,17 @@ public class DialogUtils {
 
 
     public static void insertDialog(String title, String message, Context context){
-
-
         AlertDialog.Builder alertDialogBuilder=new AlertDialog.Builder(context);
-
-        alertDialogBuilder.setMessage(title);
+        alertDialogBuilder.setTitle(title);
         alertDialogBuilder.setMessage(message);
-
-
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();//将dialog显示出来
 
     }
 
-    private AlertDialog dialog;
-
-    public void  showDialogue (Activity activity) {
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
-
-        builder.setTitle("删除信息");
-        builder.setMessage("确定删除吗?");
-        builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                Toast.makeText(BaseApplication.getContext(), "你点击了确定", Toast.LENGTH_LONG).show();
-                dialog.dismiss();
-            }
-        });
-        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                Toast.makeText(BaseApplication.getContext(),"你点击了取消",Toast.LENGTH_LONG).show();
-                dialog.dismiss();
-            }
-        });
 
 
-        //   builder.show();或者下面的代码效果是一样的
-        dialog = builder.create();
-
-        dialog.show();
+    public static void  showDialogue (Activity activity) {
 
 
     }

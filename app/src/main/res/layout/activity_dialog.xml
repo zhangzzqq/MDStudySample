@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/include"
+            layout="@layout/include_toolbar" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:onClick="button2"
+            android:text="Button2"
+            app:layout_constraintTop_toBottomOf="@+id/include"
+            tools:layout_editor_absoluteX="223dp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:onClick="button3"
+            android:text="Button3"
+            tools:layout_editor_absoluteX="34dp" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="button4"
+            android:text="Button4"
+            tools:layout_editor_absoluteX="34dp"
+            tools:layout_editor_absoluteY="227dp" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="button5"
+            android:text="Button5"
+            tools:layout_editor_absoluteX="223dp"
+            tools:layout_editor_absoluteY="227dp" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="button6"
+            android:text="onClickDialogv7"
+            app:layout_constraintTop_toBottomOf="@+id/button4"
+            tools:layout_editor_absoluteX="27dp" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:onClick="button7"
+            android:text="onClickDialogapp" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="button8"
+            android:text="阅后即焚" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="button9"
+            android:text="清除记录"
+            tools:layout_editor_absoluteX="223dp" />
+    </LinearLayout>
+
+
+</ScrollView>

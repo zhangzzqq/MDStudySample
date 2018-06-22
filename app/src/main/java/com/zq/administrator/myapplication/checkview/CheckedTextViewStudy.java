@@ -41,6 +41,7 @@ public class CheckedTextViewStudy extends AppCompatActivity implements View.OnCl
     }
 
     private void initWidget() {
+
         ctv1 = (CheckedTextView) findViewById(R.id.main_ctv1);
         ctv1.setOnClickListener(this);
         ctv1.setChecked(true);// 设置为选中，不设置默认为不选中
@@ -51,6 +52,8 @@ public class CheckedTextViewStudy extends AppCompatActivity implements View.OnCl
         ctv2.setCheckMarkDrawable(android.R.drawable.arrow_down_float);
 
         listView = (ListView) findViewById(R.id.main_lv);
+
+
 
         listView.setAdapter(new MyListViewAdapter(this,getData()));
 

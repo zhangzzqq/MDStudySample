@@ -187,7 +187,7 @@ public class AndroidTest extends AppCompatActivity {
 
     public void btnNullTest(View view) {
 
-        startActivity(new Intent(AndroidTest.this, btnNullTest.class));
+        startActivity(new Intent(AndroidTest.this, BtnNullTest.class));
 
     }
 

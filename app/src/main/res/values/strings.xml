@@ -95,7 +95,16 @@
     <string name="transo_jointbox">光接头盒</string>
     <string name="transo_terminalbox">光终端盒</string>
     <string name="wiredaccess_fiberbox">光分纤箱</string>
-
+    <string name="jiazhong">加载中...</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="prompt">提示</string>
+    <string name="readfire_message_title">阅后即焚</string>
+    <string name="accessible_point">可接入点</string>
+    <string name="space_equiproom">机房</string>
+    <string name="accessible_line">可接入线路</string>
+    <string name="layingsegment">敷设段</string>
+    <string name="cablesegment">光缆段</string>
 
 
 </resources>

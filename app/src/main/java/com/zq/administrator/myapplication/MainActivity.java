@@ -26,6 +26,7 @@ import com.zq.administrator.myapplication.activities.TabFragmentActivityTest;
 import com.zq.administrator.myapplication.adapter.DataListAdapter;
 import com.zq.administrator.myapplication.checkview.CheckedTextViewStudy;
 import com.zq.administrator.myapplication.constraintLayout.ConstraintLayoutActivity;
+import com.zq.administrator.myapplication.dialog.DialogStudy;
 import com.zq.administrator.myapplication.enumerate.EnumerateActivity;
 import com.zq.administrator.myapplication.gridlayoutstudy.GridLayoutStudy;
 import com.zq.administrator.myapplication.snackbar.SnackbarActivity;
@@ -111,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
                     case 10:
-                       TextInputActivity.startActivity(MainActivity.this);
+                        TextInputActivity.startActivity(MainActivity.this);
                         break;
 
                     case 11:
@@ -131,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
                     case 15:
-                       TextInputLayoutStudy.startActivity(MainActivity.this);
+                        TextInputLayoutStudy.startActivity(MainActivity.this);
                         break;
                     case 16:
                         NestedScrollingActivity.startActivity(MainActivity.this);
@@ -161,9 +162,12 @@ public class MainActivity extends AppCompatActivity {
                     case 24:
                         startActivity(new Intent(MainActivity.this, ConstraintLayoutActivity.class));
                         break;
-                        case 25:
+                    case 25:
                         startActivity(new Intent(MainActivity.this, GridLayoutStudy.class));
                         break;
+                    case 26:
+                    startActivity(new Intent(MainActivity.this, DialogStudy.class));
+                    break;
                 }
             }
         });
@@ -197,6 +201,7 @@ public class MainActivity extends AppCompatActivity {
         list.add("imageButtonStudy");
         list.add("constraintLayoutActivity");
         list.add("gridLayoutStudy");
+        list.add("dialogStudy");
 
         return list;
 

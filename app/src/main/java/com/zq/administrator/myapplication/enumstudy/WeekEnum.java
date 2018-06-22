@@ -1,4 +1,4 @@
-package com.zq.administrator.mdapplication.enumstudy;
+package com.zq.administrator.myapplication.enumstudy;
 
 /**
  * Created by steven on 2018/5/26.
@@ -39,6 +39,12 @@ public enum WeekEnum {
                 '}';
     }
 
+//    @Override
+//    public String toString() {
+//        return "WeekEnum{" +
+//                "date='" + date + "\'" +
+//                "}";
+//    }
 
     /**
      *
@@ -48,13 +54,13 @@ public enum WeekEnum {
      * 没有写默认是枚举enum
      * @param args
      */
-//    public static void main(String[] args) {
-//        // 没有重写 toString 方法
-//        for (WeekEnum we : WeekEnum.values()) {
-//            System.out.println(we);
-//        }
-//
-//    }
+    public static void main(String[] args) {
+        // 没有重写 toString 方法
+        for (WeekEnum we : WeekEnum.values()) {
+            System.out.println(we);
+        }
+
+    }
 
 
 }

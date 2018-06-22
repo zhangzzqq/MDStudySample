@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?><!--布局一-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:scrollbars="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/surveyCondition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7d7d7" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/networkOut3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#0185CF" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/accessible_point"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="3"
+                    android:orientation="horizontal"
+                    android:rowCount="1">
+
+                    <CheckBox
+                        android:id="@+id/checkb11"
+                        style="@style/outButton"
+                        android:text="@string/transmissionline_tranbox"
+                        android:textSize="12sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkb12"
+                        style="@style/outButton"
+                        android:text="@string/wiredaccess_fiberbox"
+                        android:textSize="12sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkb13"
+                        style="@style/outButton"
+                        android:text="@string/transo_jointbox"
+                        android:textSize="12sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkb14"
+                        style="@style/outButton"
+                        android:text="@string/space_equiproom"
+                        android:textSize="12sp" />
+                </GridLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7d7d7" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#0185CF" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/accessible_line"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill"
+                    android:columnCount="3"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:rowCount="2">
+
+                    <CheckBox
+                        android:id="@+id/checkb21"
+                        style="@style/outButton"
+                        android:text="@string/layingsegment"
+                        android:textSize="12sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkb31"
+                        style="@style/outButton"
+                        android:text="@string/cablesegment"
+                        android:textSize="12sp" />
+                </GridLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7d7d7" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#0185CF" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="搜索范围（米）"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/distance_prospection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radiobt1"
+                        style="@style/outButton"
+                        android:text="30"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:id="@+id/radiobt2"
+                        style="@style/outButton"
+                        android:text="100"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:id="@+id/radiobt3"
+                        style="@style/outButton"
+                        android:text="200"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:id="@+id/radiobt4"
+                        style="@style/outButton"
+                        android:text="500"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:id="@+id/radiobt5"
+                        style="@style/outButton"
+                        android:text="1000"
+                        android:textSize="12sp" />
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

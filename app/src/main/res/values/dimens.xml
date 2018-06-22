@@ -23,4 +23,53 @@
     <dimen name="intro_margin_20">20dp</dimen>
 
 
+    <!-- 宽高、间距大小 -->
+    <dimen name="space_0">0dp</dimen>
+    <dimen name="space_0.5">0.5dp</dimen>
+    <dimen name="space_1">1dp</dimen>
+    <dimen name="space_4">4dp</dimen>
+    <dimen name="space_5">5dp</dimen>
+    <dimen name="space_8">8dp</dimen>
+    <dimen name="space_9">9dp</dimen>
+    <dimen name="space_10">10dp</dimen>
+    <dimen name="space_11">11dp</dimen>
+    <dimen name="space_12">12dp</dimen>
+    <dimen name="space_14">14dp</dimen>
+    <dimen name="space_15">15dp</dimen>
+    <dimen name="space_16">16dp</dimen>
+    <dimen name="space_18">18dp</dimen>
+    <dimen name="space_20">20dp</dimen>
+    <dimen name="space_21">21dp</dimen>
+    <dimen name="space_23">23dp</dimen>
+    <dimen name="space_24">24dp</dimen>
+    <dimen name="space_35">35dp</dimen>
+    <dimen name="space_36">36dp</dimen>
+    <dimen name="space_40">40dp</dimen>
+    <dimen name="space_44">44dp</dimen>
+    <dimen name="space_56">56dp</dimen>
+    <dimen name="space_60">60dp</dimen>
+    <dimen name="space_71">71dp</dimen>
+    <dimen name="space_72">72dp</dimen>
+    <dimen name="space_73">73dp</dimen>
+    <dimen name="space_92">92dp</dimen>
+    <dimen name="space_126">126dp</dimen>
+    <dimen name="space_135">135dp</dimen>
+    <dimen name="space_139">139dp</dimen>
+    <dimen name="space_198">198dp</dimen>
+    <dimen name="space_200">200dp</dimen>
+
+    <!-- 字体大小 -->
+    <dimen name="ts_tiny_x">9sp</dimen>
+    <dimen name="ts_tiny_xx">10sp</dimen>
+    <dimen name="ts_small">11sp</dimen>
+    <dimen name="ts_small_x">12sp</dimen>
+    <dimen name="ts_small_xx">13sp</dimen>
+    <dimen name="ts_middle">14sp</dimen>
+    <dimen name="ts_middle_x">15sp</dimen>
+    <dimen name="ts_middle_xx">16sp</dimen>
+    <dimen name="ts_normal">17sp</dimen>
+    <dimen name="ts_normal_x">18sp</dimen>
+    <dimen name="ts_normal_xx">19sp</dimen>
+    <dimen name="ts_large">20sp</dimen>
+
 </resources>

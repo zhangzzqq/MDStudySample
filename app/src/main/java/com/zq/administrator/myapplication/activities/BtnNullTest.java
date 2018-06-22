@@ -15,15 +15,18 @@ import com.zq.administrator.myapplication.model.Person;
  * @Description:
  */
 
-public class btnNullTest extends BaseActivity {
+public class BtnNullTest extends BaseActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_null_test);
+
         TextView textView = (TextView) findViewById(R.id.tv_test);
+
         Person person = new Person("","");
+
         if(person.getEat()!=null){
             textView.setText("456");
         }
